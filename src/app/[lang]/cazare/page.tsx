@@ -36,13 +36,12 @@ export default async function Cazare({ params }: PageProps<"/[lang]/cazare">) {
         lead={t.hero.lead}
         photo={{ src: "/photos/cazare/casa-de-sus-cu-dealuri.jpg", alt: t.hero.photoAlt }}
       />
-      <SplitIntro
-        statement={t.intro.statement}
-        text={t.intro.text}
-        highlight={t.intro.rating}
-        actions={<StayActions lang={lang} />}
-        note={t.intro.note}
-      />
+      <SplitIntro statement={t.intro.statement}>
+        <p className="type-body-l text-muted">{t.intro.text}</p>
+        <p className="type-nav whitespace-pre-wrap text-forest">{t.intro.rating}</p>
+        <StayActions lang={lang} />
+        <p className="type-caption text-muted">{t.intro.note}</p>
+      </SplitIntro>
       <Gallery
         title={t.gallery.title}
         caption={t.gallery.caption}
