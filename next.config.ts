@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // A self-contained server in .next/standalone, for the Docker image (see Dockerfile).
+  output: "standalone",
   cacheComponents: true,
   images: {
     // AVIF first (smallest), WebP for browsers without AVIF; Next.js picks per browser.

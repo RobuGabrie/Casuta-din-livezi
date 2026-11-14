@@ -24,8 +24,8 @@ frames live there). The code follows the Figma design; it does not invent a new 
 | Framework | Next.js (App Router), TypeScript | Asked for; good image handling and SEO |
 | Styling | Tailwind CSS v4 with tokens from Figma | One place for colours, type, spacing |
 | Table requests | WhatsApp (CallMeBot) + email (Nodemailer, SMTP) | The owner prefers WhatsApp; email is the backup and the history. No database (owner decision) |
-| Hosting | Hetzner VPS + Caddy (automatic HTTPS) | About €4–5/month, nothing to block the project |
-| Deploy | Docker image, updated on push to GitHub | One command to publish |
+| Hosting | Hetzner Cloud server (CX23) + Coolify (automatic HTTPS) | About €6.60/month with VAT, no plan rules, room for more projects |
+| Deploy | Docker image built by Coolify on every push to `main` | Steps in docs/deploy.md |
 
 Note: the current Next.js version has breaking changes compared with older guides.
 Before writing code for a feature, read the matching guide in

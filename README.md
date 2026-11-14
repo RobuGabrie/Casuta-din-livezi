@@ -14,3 +14,8 @@ npm run dev
 ```
 
 Open http://localhost:3000.
+
+## Publish
+
+See [docs/deploy.md](docs/deploy.md) (Hetzner + Coolify) and
+[docs/notifications.md](docs/notifications.md) (WhatsApp and email for table requests).
