@@ -13,6 +13,12 @@ export const en: typeof ro = {
     lavanda: "A hectare of lavender in Cacica, Bucovina, in bloom from late June into July. Walks, photo sessions and lavender goods.",
     contact: "How to reach Căsuța din Livezi in Cacica, Suceava County: 10 km from Gura Humorului and 35 km from Suceava Airport. Phone and WhatsApp: +40 751 425 215.",
   },
+  notFound: {
+    title: "Nothing here.",
+    text: "The page may have moved, or the address has a typo. Shall we take you back?",
+    home: "Back to the home page",
+    or: "Or go straight to:",
+  },
   nav: {
     home: "Home",
     cazare: "Stay",

@@ -11,6 +11,12 @@ export const ro = {
     lavanda: "Un hectar de lavandă în Cacica, Bucovina, care înflorește de la sfârșitul lui iunie până în iulie. Plimbări, ședințe foto și produse din lavandă.",
     contact: "Cum ajungi la Căsuța din Livezi, în Cacica, județul Suceava: la 10 km de Gura Humorului și 35 km de Aeroportul Suceava. Telefon și WhatsApp: +40 751 425 215.",
   },
+  notFound: {
+    title: "Aici nu e nimic.",
+    text: "Poate pagina a fost mutată sau adresa are o greșeală. Te ducem înapoi?",
+    home: "Înapoi acasă",
+    or: "Sau mergi direct la:",
+  },
   nav: {
     home: "Acasă",
     cazare: "Cazare",

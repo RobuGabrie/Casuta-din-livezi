@@ -77,6 +77,11 @@ Measured in `specs/lavanda-contact.md`: `CallBand` (forest call-to-action),
 `spacing` option and the 736×720 photo size; `PageHero` has an optional index and note.
 Call and WhatsApp links come from `src/lib/contact.ts`.
 
+## Not-found page → `src/app/[lang]/not-found.tsx`
+
+Not in Figma. Paper header, Display title "Aici nu e nimic.", one Body L line, "Înapoi
+acasă" (primary) and text links to the three services. Returns status 404 with noindex.
+
 ## Service block ("Servicii · două așezări")
 
 Two mirrored layouts: text left with photo right, and photo left with text right.
