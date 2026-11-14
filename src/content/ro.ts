@@ -176,7 +176,7 @@ export const ro = {
       title: "O masă pregătită pentru voi.",
       lines: [
         "Vă primim cu rezervare și confirmare telefonică.",
-        "Ziua și ora se stabilesc împreună; programul exact va fi publicat aici.",
+        "Servim între 11:00 și 18:00; masa se rezervă pentru cel mult 2 ore."
       ],
     },
     reserve: {
@@ -259,6 +259,37 @@ export const ro = {
     },
   },
   actions: { call: "Sună-ne", whatsapp: "WhatsApp" },
+  reservation: {
+    errors: {
+      name: "Scrie numele tău, ca să știm pe cine căutăm.",
+      phone: "Scrie un număr de telefon la care te putem suna.",
+      date: "Alege ziua în care vrei să vii.",
+      time: "Alege ora la care ajungi.",
+      guests: "Alege numărul de persoane.",
+      notes: "Mențiunile pot avea cel mult 500 de caractere.",
+      tooMany: "Ai trimis deja câteva cereri. Pentru încă una, te rugăm să ne suni.",
+      notSent: "Cererea nu a putut fi trimisă. Te rugăm să ne suni la",
+    },
+    sending: "Se trimite…",
+    sendingNote: "Mai durează o clipă. Te rugăm să nu închizi pagina.",
+    success: {
+      title: "Am primit cererea.",
+      text: "Te sunăm în curând pentru confirmare.",
+      note: "Rezervarea este valabilă după confirmarea telefonică.",
+      again: "Trimite o altă cerere",
+    },
+    message: {
+      heading: "Cerere nouă de masă (de pe site)",
+      name: "Nume",
+      phone: "Telefon",
+      date: "Data",
+      time: "Ora",
+      until: "până la",
+      guests: "Persoane",
+      notes: "Mențiuni",
+      language: "Limba paginii",
+    },
+  },
   contactBand: {
     title: "Hai pe la noi.",
     address: ["Cacica, județul Suceava", "Bucovina, România"],

@@ -23,8 +23,7 @@ frames live there). The code follows the Figma design; it does not invent a new 
 |---|---|---|
 | Framework | Next.js (App Router), TypeScript | Asked for; good image handling and SEO |
 | Styling | Tailwind CSS v4 with tokens from Figma | One place for colours, type, spacing |
-| Data | SQLite through Node's built-in `node:sqlite` | One file on the server, no outside service |
-| Email | Nodemailer over SMTP | Alerts the owner about each new request |
+| Table requests | WhatsApp (CallMeBot) + email (Nodemailer, SMTP) | The owner prefers WhatsApp; email is the backup and the history. No database (owner decision) |
 | Hosting | Hetzner VPS + Caddy (automatic HTTPS) | About €4–5/month, nothing to block the project |
 | Deploy | Docker image, updated on push to GitHub | One command to publish |
 
@@ -94,8 +93,8 @@ and say what changed (for example `feat(home): add service blocks`).
 | 4 | Cazare | Page, photo gallery with the enlarged view, fixed Booking button on mobile |
 | 5 | Masa la noi (content) | Page without the working form yet |
 | 6 | Lavanda and Contact | Both pages, map |
-| 7 | Table requests | Form with its 4 states, saved to the database, email to the owner |
-| 8 | Admin | Password page with the list, Confirm and Decline |
+| 7 | Table requests | Form with its 4 states, sent to the owner by WhatsApp and email (docs/notifications.md) |
+| 8 | ~~Admin~~ | Dropped for now (owner decision): WhatsApp and email are enough. The Figma screen stays for later |
 | 9 | Quality pass | Search engine data, speed, keyboard and screen reader checks, English text review |
 | 10 | Publish | Server, domain, HTTPS, automatic deploy, backup of the database |
 
@@ -106,18 +105,18 @@ so any shared problem is fixed once.
 
 - Run the site and compare each page with its Figma frame at 390px and 1440px.
 - `npm run lint` and `npm run build` pass before every commit that ends a milestone.
-- Milestone 7: send a valid request, an invalid one and a spam one (hidden field),
-  and check the database row and the email.
-- Milestone 8: a wrong password is refused; status changes are saved.
+- Milestone 7: `scripts/check-form.mjs` walks through the form (errors, sending,
+  success); failure, rate limit and the spam trap are checked against a server with no
+  sending set up.
 
 ## 7. Information still needed (placeholders until then)
 
-- Phone and WhatsApp number, email address.
-- Food opening hours, number of seats, how much notice a table request needs.
+- ~~Phone and WhatsApp number, email address~~ +40 751 425 215, robumihaela69@gmail.com.
+- ~~Food opening hours~~ 11:00–18:00, tables for at most 2 hours, up to 25 guests.
 - Domain name (for example `casutadinlivezi.ro`).
 - Exact map position of the property.
 - Photo of the lavender field in bloom.
-- Whether the owner prefers email or WhatsApp alerts for new requests.
+- ~~Email or WhatsApp alerts~~ WhatsApp, with email as backup. Needs the CallMeBot key and a Gmail app password.
 
 Known already: Booking page
 `https://www.booking.com/hotel/ro/casuta-din-livezi-suceava2.html`, check-in from

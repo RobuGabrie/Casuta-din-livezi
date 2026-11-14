@@ -19,9 +19,9 @@ export const site = {
   instagramStayUrl: "https://www.instagram.com/casutadinlivezi_pensiune",
   instagramKitchenUrl: "https://www.instagram.com/casutadinlivezi_pgl",
   foundedYear: 2026,
-  // Table request form: times offered and how far ahead a date can be chosen.
-  // TODO: confirm the times with the family once the PGL schedule is set.
-  tableTimes: ["12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+  // Table request form. The kitchen serves 11:00–18:00 and a table is booked for at most
+  // `tableHours`, so the last start time is 16:00.
+  tableTimes: ["11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00"],
   tableDaysAhead: 60,
   // Largest party the form offers; bigger groups pick "more than …" and get a call.
   tableMaxGuests: 25,

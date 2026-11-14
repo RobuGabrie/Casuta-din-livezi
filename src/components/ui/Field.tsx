@@ -9,13 +9,16 @@ export function Field({
   id,
   label,
   hint,
+  error,
   className,
   children,
 }: {
   id: string;
   label: string;
-  /** A short line under the control (Caption, muted); give the control aria-describedby={`${id}-hint`}. */
+  /** A short line under the control (Caption, muted). */
   hint?: string;
+  /** Error message (Caption, error red); give the control aria-invalid. */
+  error?: string;
   className?: string;
   children: ReactNode;
 }) {
@@ -25,6 +28,11 @@ export function Field({
         {label}
       </label>
       {children}
+      {error && (
+        <p id={`${id}-error`} className="type-caption text-error">
+          {error}
+        </p>
+      )}
       {hint && (
         <p id={`${id}-hint`} className="type-caption text-muted">
           {hint}
@@ -34,8 +42,14 @@ export function Field({
   );
 }
 
+/** aria props tying a control to its Field's hint and error lines. */
+export function describedBy(id: string, { hint, error }: { hint?: boolean; error?: boolean }) {
+  const ids = [error && `${id}-error`, hint && `${id}-hint`].filter(Boolean).join(" ");
+  return { "aria-invalid": error || undefined, "aria-describedby": ids || undefined };
+}
+
 export const controlClass =
-  "type-body w-full rounded-control border border-line bg-white px-4 py-4 text-ink placeholder:text-muted " +
+  "type-body w-full rounded-control border border-line bg-white px-4 py-4 text-ink placeholder:text-muted aria-invalid:border-error " +
   "focus-visible:border-forest focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-forest";
 
 export function TextInput({ className, ...props }: ComponentProps<"input">) {

@@ -177,7 +177,7 @@ export const en: typeof ro = {
       title: "A table set for you.",
       lines: [
         "We welcome you by reservation, confirmed by phone.",
-        "We agree the day and time together; exact opening hours will be published here.",
+        "We serve between 11:00 and 18:00; a table is booked for up to 2 hours."
       ],
     },
     reserve: {
@@ -260,6 +260,38 @@ export const en: typeof ro = {
     },
   },
   actions: { call: "Call us", whatsapp: "WhatsApp" },
+  reservation: {
+    errors: {
+      name: "Add your name so we know who to ask for.",
+      phone: "Add a phone number we can call you on.",
+      date: "Choose the day you'd like to come.",
+      time: "Choose the time you'll arrive.",
+      guests: "Choose the number of guests.",
+      notes: "Notes can be at most 500 characters.",
+      tooMany: "You've already sent a few requests. For another one, please call us.",
+      notSent: "The request couldn't be sent. Please call us on",
+    },
+    sending: "Sending…",
+    sendingNote: "Just a moment. Please don't close the page.",
+    success: {
+      title: "We've got your request.",
+      text: "We'll call you soon to confirm.",
+      note: "The booking stands once we confirm it by phone.",
+      again: "Send another request",
+    },
+    // The family reads these messages, so they stay in Romanian.
+    message: {
+      heading: "Cerere nouă de masă (de pe site)",
+      name: "Nume",
+      phone: "Telefon",
+      date: "Data",
+      time: "Ora",
+      until: "până la",
+      guests: "Persoane",
+      notes: "Mențiuni",
+      language: "Limba paginii",
+    },
+  },
   contactBand: {
     title: "Come and see us.",
     address: ["Cacica, Suceava County", "Bucovina, Romania"],

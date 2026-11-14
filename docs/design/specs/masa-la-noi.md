@@ -80,5 +80,17 @@ Stone background. Padding 80 / 64 (mobile 64 / 24). "O masă pregătită pentru 
 - Under the fields: "Folosim datele doar pentru a răspunde cererii tale.⏎Nu se face
   nicio plată online." (Caption, muted), 24, "Trimite cererea" (primary).
 - The section has the id `rezervare`; other pages link to it.
-- Milestone 5 builds the form's look only. Sending, validation and the four states
-  (default, error, sending, success) come in milestone 7.
+- States (Figma `6:1306`–`6:1416` and the sheet's "Mesaj / Succes" component):
+  - Error: the control's border turns error red and a Caption line in error red sits
+    under it; the cursor moves to the first field to fix. The error goes away as soon
+    as that field is edited.
+  - Sending: the button reads "Se trimite…" at 65% opacity, with "Mai durează o clipă.
+    Te rugăm să nu închizi pagina." (Caption, muted) under it.
+  - Success: the form is replaced by the "Mesaj / Succes" card (1px line border,
+    padding 24, 16 apart: "Am primit cererea." H2, "Te sunăm în curând pentru
+    confirmare." Body M, "Rezervarea este valabilă după confirmarea telefonică."
+    Caption muted), then "Trimite o altă cerere" (secondary) for a fresh form.
+  - Not sent (no WhatsApp or email went out) and too many requests: a Body M line in
+    error red above the button, with the phone number.
+  The Figma mobile state frames show the form as its own screen with "← Înapoi"; the
+  site keeps the form on the Masa la noi page, so that bar is not used.
