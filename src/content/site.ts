@@ -9,8 +9,7 @@ export const site = {
   airbnbUrl: "https://www.airbnb.com/rooms/1540500135713667830" as string,
   // Phone and WhatsApp.
   phone: "+40 751 425 215" as string,
-  // TODO: real email address.
-  email: "" as string,
+  email: "robumihaela69@gmail.com" as string,
   facebookUrl: "https://www.facebook.com/Casutadinlivezi",
   // Two Instagram accounts: one for the stay, one for the kitchen (PGL).
   // The footer's single Instagram link (as in Figma) goes to the stay account;
@@ -22,4 +21,8 @@ export const site = {
   // TODO: confirm the times with the family once the PGL schedule is set.
   tableTimes: ["12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
   tableDaysAhead: 60,
+  // Largest party the form offers; bigger groups pick "more than …" and get a call.
+  tableMaxGuests: 25,
+  // A table is booked for at most this many hours.
+  tableHours: 2,
 } as const;

@@ -8,11 +8,14 @@ import { cn } from "@/lib/cn";
 export function Field({
   id,
   label,
+  hint,
   className,
   children,
 }: {
   id: string;
   label: string;
+  /** A short line under the control (Caption, muted); give the control aria-describedby={`${id}-hint`}. */
+  hint?: string;
   className?: string;
   children: ReactNode;
 }) {
@@ -22,6 +25,11 @@ export function Field({
         {label}
       </label>
       {children}
+      {hint && (
+        <p id={`${id}-hint`} className="type-caption text-muted">
+          {hint}
+        </p>
+      )}
     </div>
   );
 }

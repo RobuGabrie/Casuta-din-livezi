@@ -73,6 +73,10 @@ Stone background. Padding 80 / 64 (mobile 64 / 24). "O masă pregătită pentru 
   look like Figma on every phone: the next 60 days, and the times in
   `site.tableTimes` (to confirm with the family). The "⌄" sits at the right edge of the
   box rather than right after the text.
+- Owner rules (not in Figma): up to 25 guests in the list, then "Mai mult de 25 de
+  persoane"; a table is booked for at most 2 hours, said in a caption under Ora
+  ("Masa se rezervă pentru cel mult 2 ore.", Caption, muted, 8 below the control).
+  On desktop the hint makes the Data | Ora row 26px taller.
 - Under the fields: "Folosim datele doar pentru a răspunde cererii tale.⏎Nu se face
   nicio plată online." (Caption, muted), 24, "Trimite cererea" (primary).
 - The section has the id `rezervare`; other pages link to it.

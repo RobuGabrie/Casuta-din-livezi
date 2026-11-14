@@ -7,7 +7,7 @@ import { Lines } from "@/components/ui/Lines";
 import { getDictionary, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
 
-const guestCounts = Array.from({ length: 20 }, (_, i) => i + 1);
+const guestCounts = Array.from({ length: site.tableMaxGuests }, (_, i) => i + 1);
 const noSubscription = () => () => {};
 
 /** The next `count` days from today, as { value: "2026-11-21", label: "sâmbătă, 21 noiembrie" }. */
@@ -64,8 +64,8 @@ export function ReservationForm({ lang }: { lang: Locale }) {
           ))}
         </Select>
       </Field>
-      <Field id="rezervare-ora" label={t.time}>
-        <Select id="rezervare-ora" name="time" defaultValue="" required>
+      <Field id="rezervare-ora" label={t.time} hint={t.timeHint}>
+        <Select id="rezervare-ora" name="time" defaultValue="" required aria-describedby="rezervare-ora-hint">
           <option value="" disabled>
             {t.timePlaceholder}
           </option>
@@ -83,7 +83,7 @@ export function ReservationForm({ lang }: { lang: Locale }) {
               {t.guestOption(n)}
             </option>
           ))}
-          <option value="20+">{t.guestsMore}</option>
+          <option value="more">{t.guestsMore}</option>
         </Select>
       </Field>
       <Field id="rezervare-mentiuni" label={t.notes} className="lg:col-span-2">
