@@ -17,8 +17,10 @@ this folder is a saved copy of it so the rules are at hand in every session.
 2. Use only the tokens in `tokens.md`. If a value is missing, read it from Figma and
    add it there first. Never guess a colour, size or spacing.
 3. Copy the text from Figma exactly, including Romanian diacritics (ă â î ș ț).
-4. After building, open the page at 390px and at 1440px wide and compare it with the
-   picture in `screens/`. Fix every visible difference before committing.
+4. After building, run `scripts/screenshots.sh http://localhost:3000 /ro/<page>` with
+   the site running. It saves the page at 390px and 1440px wide in `.screenshots/`.
+   Compare them with the pictures in `screens/` and fix every visible difference
+   before committing.
 5. If Figma and this folder disagree, Figma wins. Update this folder in the same commit.
 6. If the design does not cover something (a width between 390 and 1440, a hover
    state, an error case), choose the quietest option that fits these rules and write
