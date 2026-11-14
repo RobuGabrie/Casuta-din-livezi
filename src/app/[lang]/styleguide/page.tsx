@@ -71,8 +71,8 @@ export default function Styleguide() {
       <section className="flex flex-col gap-6">
         <h2 className="type-wordmark">Butoane</h2>
         <div className="flex flex-wrap items-center gap-4">
-          <Button href="/styleguide">Rezervă o masă</Button>
-          <Button href="/styleguide" variant="secondary">
+          <Button href="/ro/styleguide">Rezervă o masă</Button>
+          <Button href="/ro/styleguide" variant="secondary">
             Află mai multe
           </Button>
           <Button href="https://www.booking.com/hotel/ro/casuta-din-livezi-suceava2.html" variant="booking">
@@ -81,7 +81,7 @@ export default function Styleguide() {
           <Button disabled>Se trimite…</Button>
         </div>
         <div className="flex flex-wrap items-center gap-4 bg-forest p-6">
-          <Button href="/styleguide" variant="onPhoto">
+          <Button href="/ro/styleguide" variant="onPhoto">
             Descoperă câmpul
           </Button>
         </div>
