@@ -11,28 +11,31 @@ Contact → footer. Section heights (desktop / mobile): 920/800, 432/368, 880/93
 Between 1024 and 1440 the desktop columns keep the Figma proportions (fr units) and the
 128px column gap shrinks with the width; photos keep the Figma aspect ratio.
 
-## Hero → `HomeHero`
+## Hero → `HomeHero` (redesigned in Figma on 2026-11-15)
 
-Photo `casa-de-sus-cu-dealuri`, cover. Contrast layer: ink, top to bottom
-55% → 12% (at 45%) → 70%.
+Photo `casa-de-sus-cu-dealuri`, cover. Contrast layer (`PhotoContrast variant="hero"`):
+ink 55% at the top, 12% at 38%, 62% at 58%, 80% at the bottom.
 
 | | Desktop (920 tall) | Mobile (800 tall) |
 |---|---|---|
 | Header | onPhoto, rule in paper at 40% | same |
 | "Cacica, Bucovina · La noi, acasă" (Nav, paper) | y 170 | y 130 |
-| Service entries | y 570, one row, columns 372 / 464 / 412, 32 apart | y 350, stacked, 16 apart |
-| Entry | rule (paper 60%), 16, number box 36, 16, word | rule, 4, number box 36, 4, word |
-| Word | Serif 112/116 | Serif 64/64 |
-| Bottom line "O căsuță. O masă bună. Un câmp de lavandă." (Nav) | y 850, left | y 730, left |
-| "Descoperă locul ↓" (Caption) | y 852, right-aligned | y 766, right-aligned |
+| Greeting "Bine ai venit⏎la noi, acasă." (h1) | Serif 64/64, −2%, y 430 | Serif 44/48, y 438 |
+| Line "O căsuță. O masă bună. Un câmp de lavandă." | Body M, 24 under the greeting | Body M, 16 under |
+| Services | 136 under the line; 3 equal columns, 32 apart | 16 under "Descoperă locul"; columns 98 / 122 / 98, 12 apart |
+| "Descoperă locul ↓" (Caption) | 37 under the services, right-aligned; 28 from the bottom | 28 under the line, left-aligned |
+| Space under the last item | 28 | 69 (under the services) |
 
-The three words link to Cazare, Masa la noi and Lavanda. "Descoperă locul ↓" jumps to
-"Bun venit".
+Each service selector links to its page: a 1px rule (paper 60%), 8, the name and, on
+desktop, an arrow "→" (Manrope Medium 20/28) at the right end, 8, a description.
 
-Decision: in Figma the numbers "01", "02", "03" sit in zero-width text boxes, so each
-digit wraps onto its own line. That is a glitch, not a design choice. The code shows
-"01" on one line in the Index style, at the left, inside the same 36px box so the words
-stay where Figma puts them.
+| | Name style | Description |
+|---|---|---|
+| Desktop | Serif 48/56, −1% | Nav (Manrope Medium 14/20): "O căsuță doar pentru voi", "Bucătărie de sezon, în familie", "Un hectar de lavandă" |
+| Mobile | Serif 32/40, −1% | Caption (12/18): "Doar pentru voi", "Bucătărie de sezon", "Un hectar de lavandă" |
+
+Decision: below 390px wide the mobile name size follows the column width (about 25px at
+320) so "Masa la noi" stays on one line; at 390 it is exactly the Figma 32px.
 
 ## Bun venit → `IntroStatement`
 

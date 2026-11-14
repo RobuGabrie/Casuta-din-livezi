@@ -20,7 +20,8 @@ const colors = [
 
 const type = [
   ["Display", "type-display", "Lavanda"],
-  ["Service link", "type-service-link", "Masa la noi"],
+  ["Hero intro", "type-hero-intro", "Bine ai venit la noi, acasă."],
+  ["Service selector", "type-service-selector", "Masa la noi"],
   ["Statement", "type-statement", "La capătul drumului, începe tihna."],
   ["H2", "type-h2", "O căsuță, numai a voastră."],
   ["Wordmark", "type-wordmark", "Căsuța din Livezi"],

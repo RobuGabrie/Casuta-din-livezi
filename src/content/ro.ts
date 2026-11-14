@@ -44,6 +44,13 @@ export const ro = {
     hero: {
       place: "Cacica, Bucovina · La noi, acasă",
       tagline: "O căsuță. O masă bună. Un câmp de lavandă.",
+      title: ["Bine ai venit", "la noi, acasă."],
+      // Under each service in the hero: long on desktop, short on mobile.
+      services: {
+        cazare: { long: "O căsuță doar pentru voi", short: "Doar pentru voi" },
+        masa: { long: "Bucătărie de sezon, în familie", short: "Bucătărie de sezon" },
+        lavanda: { long: "Un hectar de lavandă", short: "Un hectar de lavandă" },
+      },
       discover: "Descoperă locul",
     },
     intro: {

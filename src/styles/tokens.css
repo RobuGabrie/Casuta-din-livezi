@@ -50,14 +50,29 @@
   }
 }
 
-@utility type-service-link {
+/* Home hero greeting ("Bine ai venit⏎la noi, acasă."): 44/48 mobile, 64/64 desktop. */
+@utility type-hero-intro {
   font-family: var(--font-serif);
-  font-size: 64px;
-  line-height: 1;
+  font-size: 44px;
+  line-height: calc(48 / 44);
   letter-spacing: -0.02em;
   @media (width >= 64rem) {
-    font-size: clamp(64px, 7.778vw, 112px);
-    line-height: calc(116 / 112);
+    font-size: clamp(44px, 4.444vw, 64px);
+    line-height: 1;
+  }
+}
+
+/* Home hero service selectors: 32/40 mobile, 48/56 desktop, letter spacing −1%.
+   On phones the size follows the width of the three columns, so "Masa la noi" stays on
+   one line: 32px at the 390 design, about 25px at 320. */
+@utility type-service-selector {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, calc((100vw - 72px) * 0.1007), 32px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  @media (width >= 64rem) {
+    font-size: clamp(32px, 3.333vw, 48px);
+    line-height: calc(56 / 48);
   }
 }
 

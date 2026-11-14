@@ -46,6 +46,13 @@ export const en: typeof ro = {
     hero: {
       place: "Cacica, Bucovina · Our home",
       tagline: "A cottage. A good meal. A lavender field.",
+      title: ["Welcome", "to our home."],
+      // Under each service in the hero: long on desktop, short on mobile.
+      services: {
+        cazare: { long: "A cottage just for you", short: "Just for you" },
+        masa: { long: "Seasonal cooking, as a family", short: "Seasonal cooking" },
+        lavanda: { long: "A hectare of lavender", short: "A hectare of lavender" },
+      },
       discover: "Discover the place",
     },
     intro: {
