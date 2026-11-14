@@ -10,8 +10,11 @@ export const site = {
   phone: "",
   // TODO: real email address.
   email: "",
-  // TODO: Facebook and Instagram page addresses. Hidden in the footer while empty.
-  facebookUrl: "",
-  instagramUrl: "",
+  facebookUrl: "https://www.facebook.com/Casutadinlivezi",
+  // Two Instagram accounts: one for the stay, one for the kitchen (PGL).
+  // The footer's single Instagram link (as in Figma) goes to the stay account;
+  // the kitchen account is linked from the Masa la noi page.
+  instagramStayUrl: "https://www.instagram.com/casutadinlivezi_pensiune",
+  instagramKitchenUrl: "https://www.instagram.com/casutadinlivezi_pgl",
   foundedYear: 2026,
 } as const;

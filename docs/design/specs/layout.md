@@ -67,8 +67,9 @@ Items in order:
 3. Tagline "Un loc al familiei noastre. Un pic de liniște pentru tine." (Body M).
 4. Links: Cazare, Masa la noi, Lavanda, Contact (Nav style).
 5. Social icons: Facebook, Instagram; 24×24, 1.5px paper stroke, 24 apart.
-6. Text links: Facebook, Instagram, Booking.com (Nav style, about 20px apart).
+6. Text links: Facebook, Instagram, Booking.com (Nav style, 14px apart).
 7. "© 2026 Căsuța din Livezi · Cacica, Bucovina" (Caption).
 
-All text paper. Facebook and Instagram are shown only once their addresses are known
-(`src/content/site.ts`); Booking.com is always shown.
+All text paper. Facebook goes to the family's page. There are two Instagram accounts
+(stay and kitchen); the footer has one Instagram link, as in Figma, and it goes to the
+stay account. The kitchen account is linked from the Masa la noi page.

@@ -11,7 +11,7 @@ export function SiteFooter({ lang }: { lang: Locale }) {
   const t = getDictionary(lang);
   const social = [
     { url: site.facebookUrl, label: "Facebook", Icon: FacebookIcon },
-    { url: site.instagramUrl, label: "Instagram", Icon: InstagramIcon },
+    { url: site.instagramStayUrl, label: "Instagram", Icon: InstagramIcon },
   ].filter((s) => s.url);
   const external = [...social, { url: site.bookingUrl, label: "Booking.com" }];
 
@@ -46,7 +46,7 @@ export function SiteFooter({ lang }: { lang: Locale }) {
           </ul>
         )}
 
-        <ul className="type-nav flex flex-wrap gap-x-5 gap-y-2">
+        <ul className="type-nav flex flex-wrap gap-x-[14px] gap-y-2">
           {external.map(({ url, label }) => (
             <li key={label}>
               <a
