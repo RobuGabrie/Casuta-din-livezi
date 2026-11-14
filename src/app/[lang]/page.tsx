@@ -8,6 +8,7 @@ import { ServiceBlock } from "@/components/sections/ServiceBlock";
 import { Button } from "@/components/ui/Button";
 import { getDictionary, hasLocale, href } from "@/content/i18n";
 import { site } from "@/content/site";
+import { callHref } from "@/lib/contact";
 
 // Acasă. Figma frames 6:271 (desktop) and 6:262 (mobile); spec in docs/design/specs/acasa.md.
 export default async function Home({ params }: PageProps<"/[lang]">) {
@@ -38,6 +39,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 {t.stay.airbnb}
               </Button>
             )}
+            <Button href={callHref(lang)} variant="secondary">
+              {t.stay.direct}
+            </Button>
           </>
         }
       />

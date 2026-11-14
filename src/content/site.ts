@@ -6,8 +6,7 @@
 export const site = {
   name: "Căsuța din Livezi",
   bookingUrl: "https://www.booking.com/hotel/ro/casuta-din-livezi-suceava2.html",
-  // TODO: Airbnb listing address. The Airbnb button stays hidden while empty.
-  airbnbUrl: "" as string,
+  airbnbUrl: "https://www.airbnb.com/rooms/1540500135713667830" as string,
   // TODO: real phone / WhatsApp number in international format.
   phone: "" as string,
   // TODO: real email address.

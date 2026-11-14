@@ -44,6 +44,7 @@ export const ro = {
       facts: ["1 dormitor · living · chicinetă", "Balcon · grădină · parcare gratuită"],
       booking: "Rezervă pe Booking.com",
       airbnb: "Rezervă pe Airbnb",
+      direct: "Rezervă cu noi",
       photoAlt: "Căsuța văzută de sus, cu dealurile în spate",
     },
     table: {

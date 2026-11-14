@@ -46,6 +46,7 @@ export const en: typeof ro = {
       facts: ["1 bedroom · living room · kitchenette", "Balcony · garden · free parking"],
       booking: "Book on Booking.com",
       airbnb: "Book on Airbnb",
+      direct: "Book with us",
       photoAlt: "The cottage seen from above, with the hills behind",
     },
     table: {

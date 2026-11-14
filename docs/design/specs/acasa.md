@@ -63,8 +63,12 @@ button → 1px rule in line colour.
 | Button | Rezervă pe Booking.com (booking) | Rezervă o masă (primary) → Masa la noi page, form |
 | Photo | casa-de-sus-cu-dealuri | sala-panorama-1 |
 
-Owner request (not in Figma): the stay also lists Airbnb. When `site.airbnbUrl` is set,
-an outline button "Rezervă pe Airbnb ↗" sits next to the Booking button, 12px apart.
+Owner requests (not in Figma): the stay block has three buttons, 12px apart, wrapping
+to a new line when they don't fit:
+1. "Rezervă pe Booking.com ↗" (booking), as in Figma.
+2. "Rezervă pe Airbnb ↗" (secondary with arrow), when `site.airbnbUrl` is set.
+3. "Rezervă cu noi" (secondary): calls the family directly. It is a tel: link once
+   `site.phone` is set; until then it opens the Contact page.
 
 ## Lavanda → `PhotoBand`
 
