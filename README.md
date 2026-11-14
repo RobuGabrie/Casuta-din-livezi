@@ -17,5 +17,6 @@ Open http://localhost:3000.
 
 ## Publish
 
-See [docs/deploy.md](docs/deploy.md) (Hetzner + Coolify) and
+See [docs/deploy.md](docs/deploy.md) (Oracle server + Cloudflare Tunnel, deployed by
+GitHub Actions) and
 [docs/notifications.md](docs/notifications.md) (WhatsApp and email for table requests).

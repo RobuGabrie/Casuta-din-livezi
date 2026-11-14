@@ -24,6 +24,8 @@ RUN addgroup -S app && adduser -S app -G app
 COPY --from=build --chown=app:app /app/.next/standalone ./
 COPY --from=build --chown=app:app /app/.next/static ./.next/static
 COPY --from=build --chown=app:app /app/public ./public
+# Converted photos are cached here; the server mounts a volume so they survive deploys.
+RUN mkdir -p .next/cache && chown app:app .next/cache
 USER app
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD wget -qO- http://127.0.0.1:3000/ro >/dev/null || exit 1

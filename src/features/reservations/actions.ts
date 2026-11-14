@@ -33,7 +33,9 @@ export async function requestTable(_previous: ReservationState, form: FormData):
   if (!result.ok) return { status: "invalid", errors: result.errors };
 
   const h = await headers();
-  const visitor = h.get("x-forwarded-for")?.split(",")[0]?.trim() || h.get("x-real-ip") || "unknown";
+  // Behind the Cloudflare Tunnel the visitor's address is in CF-Connecting-IP.
+  const visitor =
+    h.get("cf-connecting-ip") || h.get("x-forwarded-for")?.split(",")[0]?.trim() || h.get("x-real-ip") || "unknown";
   if (tooMany(visitor, Date.now())) return { status: "failed", reason: "tooMany" };
 
   const langValue = String(form.get("lang") ?? "ro");

@@ -1,0 +1,36 @@
+# Runs the site on the server, published through its own Cloudflare Tunnel (no open
+# ports). The deploy workflow copies this file to ~/casuta-din-livezi on the server and
+# writes .env next to it from the GitHub secrets. See docs/deploy.md.
+name: casuta
+
+services:
+  web:
+    image: ghcr.io/robugabrie/casuta-din-livezi:latest
+    env_file: .env
+    environment:
+      NODE_OPTIONS: --max-old-space-size=256
+    volumes:
+      # Converted photos, kept between deploys so a small CPU converts each one once.
+      - image-cache:/app/.next/cache
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      web:
+        condition: service_healthy
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  image-cache:

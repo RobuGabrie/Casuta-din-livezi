@@ -1,116 +1,111 @@
-# Publishing on a Hetzner server with Coolify
+# Publishing on the Oracle server with Cloudflare
 
-One small server runs this site and any future projects (sites, databases). Coolify is
-a free control panel on that server: it builds the site from GitHub on every push and
-handles HTTPS. Steps marked **you** need your accounts or payment details; the rest
-can be done together.
+The site runs on the existing Oracle Cloud server (the one that hosted
+`scolaritate-usv-proxy`), published through its own **Cloudflare Tunnel**, so the server
+needs no open web ports. GitHub Actions builds and deploys it on every push to `main`
+(`.github/workflows/deploy.yml`), the same pattern the proxy used.
 
-The project is ready for it: `Dockerfile` builds the production image (tested locally:
-all pages, photos, 404, sitemap and the table form work inside the container).
+Cost: €0 for hosting; the domain is about €10/year.
+Backup plan if the Oracle server goes away: `docs/deploy-hetzner-coolify.md`. Nothing
+lives only on the server (no database), so moving takes about an hour.
 
-Checked on 2026-11-15 against Coolify's install and firewall docs. Prices change;
-confirm on hetzner.com before ordering.
+How it fits together:
 
-## 1. Domain (you)
-
-Register `casutadinlivezi.ro` (it was free on 2026-11-15) at any .ro registrar, for
-example ROMARG or Hostico, about €10/year. Don't buy hosting with it, only the domain.
-
-## 2. SSH key on your Mac (you, once)
-
-```bash
-ssh-keygen -t ed25519 -C "gabi-mac"     # press Enter for the defaults, choose a passphrase
-cat ~/.ssh/id_ed25519.pub               # copy this line for step 3
+```
+push to main → GitHub Actions: lint, type-check, build image → ghcr.io/robugabrie/casuta-din-livezi
+             → SSH to the server: copy deploy/docker-compose.yml, write .env, docker compose up
+visitor → Cloudflare → tunnel (cloudflared container on the server) → web container :3000
 ```
 
-## 3. Server (you)
+Tested locally on 2026-11-15 with the same compose file: healthy, photos cached in the
+volume, about 160 MB of memory (limit 512 MB).
 
-In the Hetzner Cloud console (console.hetzner.cloud):
+## 1. Free the server (you)
 
-1. Create a project, e.g. "Robu".
-2. Add a server:
-   - Location: Falkenstein or Nuremberg (Germany; ~25–35 ms from Romania).
-   - Image: **Ubuntu 24.04**.
-   - Type: **CX23** (2 vCPU, 4 GB RAM, 40 GB, 20 TB traffic; about €5.49/month + VAT)
-     or **CAX11** (same, ARM). Coolify needs at least 2 cores and 2 GB RAM.
-   - SSH key: paste the line from step 2.
-   - **Backups: on** (+20%).
-   - Name: e.g. `server-1`.
-3. Firewalls → create one, attach it to the server, inbound rules (TCP):
-   - 22 (SSH), 80, 443: keep.
-   - 8000, 6001, 6002: Coolify dashboard; **remove after step 6**.
-4. Note the server's IPv4 address.
+1. In the `scolaritate-usv-proxy` repo: Actions → "CI & Deploy" → ⋯ → **Disable
+   workflow**, so a push there doesn't start it again.
+2. On the server: `cd ~/scolaritate-usv-proxy && docker compose down`
+   (add `-v` to also delete its Grafana and Loki data).
 
-## 4. DNS (you)
+## 2. Domain on Cloudflare (you)
 
-At the registrar, point the domain to the server (A records, the IPv4 from step 3):
+1. Buy `casutadinlivezi.ro` at a .ro registrar (ROMARG, Hostico…). Cloudflare can't
+   sell .ro domains.
+2. Cloudflare dashboard → **Add a domain** → `casutadinlivezi.ro` → Free plan.
+3. Cloudflare shows two nameservers. At the registrar, replace the domain's nameservers
+   with those two. Wait until Cloudflare says the domain is **Active** (minutes to a
+   few hours).
+4. SSL/TLS → Edge Certificates → **Always Use HTTPS: on**.
 
-| Name | Type | Value |
-|---|---|---|
-| `@` (casutadinlivezi.ro) | A | server IP |
-| `www` | A | server IP |
-| `coolify` | A | server IP (the dashboard) |
+## 3. Tunnel (you)
 
-Changes can take from minutes to a few hours to work everywhere.
+1. Cloudflare → Zero Trust → Networks → **Tunnels** → Create a tunnel → Cloudflared →
+   name it `casuta`.
+2. On the install screen, copy the **token** (the long string after `--token` in the
+   shown command). Don't run the command; the server runs cloudflared in Docker.
+3. Public hostnames → add two, both with Service **HTTP** and URL **`web:3000`**:
+   - `casutadinlivezi.ro`
+   - `www.casutadinlivezi.ro`
 
-## 5. Install Coolify
+## 4. Cloudflare rules (you, once)
 
-```bash
-ssh root@SERVER_IP
-apt update && apt upgrade -y
-curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
-```
+- Rules → Redirect Rules → template **"Redirect from WWW to root"**.
+- Caching → Cache Rules → new rule "Photos and assets": when **URI Path starts with**
+  `/_next/image` **or** `/_next/static` **or** `/photos/` **or** `/og/` → **Eligible for
+  cache**, Edge TTL: **use cache-control header if present**. The server's small CPU
+  then converts each photo once and Cloudflare serves it after that.
 
-**Right after it finishes**, open `http://SERVER_IP:8000` and create the admin account.
-Coolify accepts the first account only in the first 10 minutes, and whoever registers
-first controls the server. If the page says "Setup window closed", run
-`docker restart coolify` and reload.
+## 5. GitHub secrets and settings (you)
 
-Then save a copy of `/data/coolify/source/.env` somewhere safe (a password manager): it
-holds the keys needed to restore Coolify from a backup.
+In `Casuta-din-livezi` → Settings → Secrets and variables → Actions:
 
-## 6. Dashboard on its own address
+| Secret | Value |
+|---|---|
+| `SERVER_HOST` | same as in the proxy repo (the server's IP or name) |
+| `SERVER_USER` | same as in the proxy repo |
+| `SERVER_SSH_KEY` | same private key as in the proxy repo |
+| `CLOUDFLARE_TUNNEL_TOKEN` | the token from step 3 |
+| `CALLMEBOT_APIKEY` | from WhatsApp, see docs/notifications.md |
+| `SMTP_USER` | the Gmail address that sends the copies |
+| `SMTP_PASS` | its app password, see docs/notifications.md |
 
-In Coolify: Settings → Instance's Domain → `https://coolify.casutadinlivezi.ro` → Save.
-Once `https://coolify.casutadinlivezi.ro` opens, delete the 8000, 6001 and 6002 rules
-from the Hetzner firewall.
+GitHub never shows a saved secret again, so the three `SERVER_*` values have to come
+from wherever you kept them when you set up the proxy. If the SSH key is lost, make a
+new one (`ssh-keygen -t ed25519 -f ~/.ssh/casuta_deploy`), add the `.pub` line to
+`~/.ssh/authorized_keys` on the server (Oracle console → instance → Console connection
+or Cloud Shell), and use the new private key.
 
-## 7. Add the site
+Variables tab:
 
-1. Sources → add a **GitHub App** and give it access to `RobuGabrie/Casuta-din-livezi`.
-2. Projects → New → Add resource → Public/Private repository (GitHub App) → the repo,
-   branch `main`.
-3. Build Pack: **Dockerfile**. Port: **3000**.
-4. Domains: `https://casutadinlivezi.ro,https://www.casutadinlivezi.ro`, and set the
-   redirect to the non-www address.
-5. Environment variables:
+| Variable | Value |
+|---|---|
+| `DEPLOY_ENABLED` | `true` (deploys are off until this is set) |
+| `SITE_URL` | optional; defaults to `https://casutadinlivezi.ro` |
 
-   | Name | Value | Build variable? |
-   |---|---|---|
-   | `SITE_URL` | `https://casutadinlivezi.ro` | **yes** |
-   | `CALLMEBOT_APIKEY` | from docs/notifications.md | no |
-   | `SMTP_HOST` | `smtp.gmail.com` | no |
-   | `SMTP_PORT` | `465` | no |
-   | `SMTP_USER` | the sending Gmail address | no |
-   | `SMTP_PASS` | its app password | no |
-   | `NOTIFY_EMAIL` | `robumihaela69@gmail.com` | no |
+## 6. First deploy
 
-6. Deploy. The first build takes a few minutes. HTTPS certificates are created
-   automatically once DNS points at the server.
-7. Turn on **Automatic deployment** so every push to `main` publishes the site.
+Actions → "Check & deploy" → **Run workflow** (or push to `main`). The deploy job:
+copies `deploy/docker-compose.yml` to `~/casuta-din-livezi` on the server, writes `.env`
+there from the secrets (readable only by that user), pulls the image and starts the
+`web` and `tunnel` containers. Its log ends with `docker compose ps`.
 
-## 8. Check
+## 7. Check
 
-- `https://casutadinlivezi.ro` opens and redirects to `/ro`; `www.` redirects too.
-- Send a real table request and confirm the WhatsApp message and the email arrive.
-- Optional: `node scripts/check-a11y.mjs https://casutadinlivezi.ro` and
-  `node scripts/screenshots.mjs https://casutadinlivezi.ro /ro`.
+- `https://casutadinlivezi.ro` opens and goes to `/ro`; `www.` redirects.
+- Send one real table request: the WhatsApp message and the email arrive.
+- In Cloudflare Zero Trust → Tunnels, `casuta` shows **Healthy**.
 
-## Later
+## Day to day
 
-- **Google:** add the site to Google Search Console and submit
-  `https://casutadinlivezi.ro/sitemap.xml`. Link the site from the Google Business
-  profile, Booking.com, Airbnb, Facebook and both Instagram bios.
-- **Updates:** Ubuntu installs security updates automatically
-  (`unattended-upgrades` is on by default); Coolify shows when it has an update.
-- **More projects:** add each as a new resource in Coolify, with its own domain.
+- Every push to `main` deploys by itself in about 3–5 minutes.
+- On the server: `cd ~/casuta-din-livezi && docker compose ps` (status),
+  `docker compose logs -f web` (logs), `docker compose restart` (restart).
+- Oracle Always Free: idle servers can be reclaimed. Upgrading the Oracle account to
+  Pay As You Go (still €0 within the free limits) is reported to prevent that; set a
+  budget alert of €1 so any charge is noticed.
+
+## After launch
+
+- Google Search Console → add the site → submit `https://casutadinlivezi.ro/sitemap.xml`.
+- Link the site from Google Business, Booking.com, Airbnb, Facebook and both Instagram
+  bios.
