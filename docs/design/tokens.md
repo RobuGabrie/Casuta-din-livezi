@@ -15,6 +15,7 @@ Read from the Figma variables and text styles on 2026-11-14. In code they live i
 | forest | `#354537` | color/brand/olive | Buttons, contact band, footer, mobile menu |
 | line | `#CECEC4` | color/border/line | Hairlines, field borders |
 | error | `#A64032` | color/state/error | Field errors, "Refuzată" status |
+| forest-deep | `#313F32` | (not in Figma) | Hover on forest buttons: forest mixed 20% with ink |
 | sage | `#8A927E` | color/brand/sage | Defined, not used on the pages yet |
 | wood | `#7F6C53` | color/brand/wood | Defined, not used on the pages yet |
 
@@ -58,3 +59,13 @@ Page margins: 24 (mobile), 64 (desktop).
 ## Breakpoint
 
 One switch at 1024px. Below it: mobile layout. From it up: desktop layout.
+Between 1024px and 1440px the serif sizes scale with the screen width and reach the
+Figma size at 1440px.
+
+## In code
+
+Colours are Tailwind utilities (`bg-forest`, `text-muted`, `border-line`). Type
+styles are single classes: `type-display`, `type-service-link`, `type-statement`,
+`type-h2`, `type-wordmark`, `type-h3`, `type-body-l`, `type-body`, `type-button`,
+`type-nav`, `type-accent`, `type-index`, `type-caption`, `type-attribution`.
+Compare the result with Figma at `/styleguide`.
