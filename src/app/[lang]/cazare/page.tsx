@@ -11,12 +11,13 @@ import { StayActions } from "@/components/sections/StayActions";
 import { StickyBookingBar } from "@/components/sections/StickyBookingBar";
 import { getDictionary, hasLocale } from "@/content/i18n";
 import { callHref } from "@/lib/contact";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/cazare">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const t = getDictionary(lang);
-  return { title: t.nav.cazare, description: t.stay.hero.lead };
+  return pageMetadata({ lang, page: "cazare", title: t.nav.cazare, description: t.seo.cazare });
 }
 
 // Cazare. Figma frames 6:290 (desktop) and 6:280 (mobile); spec in docs/design/specs/cazare.md.

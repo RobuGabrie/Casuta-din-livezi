@@ -8,12 +8,13 @@ import { Button } from "@/components/ui/Button";
 import { getDictionary, hasLocale } from "@/content/i18n";
 import { site } from "@/content/site";
 import { callHref, whatsappHref } from "@/lib/contact";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/lavanda">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const t = getDictionary(lang);
-  return { title: t.nav.lavanda, description: t.lavender.season.text };
+  return pageMetadata({ lang, page: "lavanda", title: t.nav.lavanda, description: t.seo.lavanda });
 }
 
 // Lavanda. Figma frames 6:323 (desktop) and 6:315 (mobile); spec in docs/design/specs/lavanda-contact.md.

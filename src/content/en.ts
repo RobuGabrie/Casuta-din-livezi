@@ -7,6 +7,12 @@ export const en: typeof ro = {
     description:
       "A cottage among the orchards, home cooking from our farm and a lavender field in Cacica, Bucovina.",
   },
+  seo: {
+    cazare: "A holiday cottage in Cacica, Bucovina: one bedroom, living room, kitchenette, a balcony facing the hills and free parking. Book directly with us or on Booking.com and Airbnb.",
+    masa: "A Local Gastronomic Point in Cacica, Bucovina: food cooked as a family, from our farm and the village, with no fixed menu. Book a table between 11:00 and 18:00.",
+    lavanda: "A hectare of lavender in Cacica, Bucovina, in bloom from late June into July. Walks, photo sessions and lavender goods.",
+    contact: "How to reach Căsuța din Livezi in Cacica, Suceava County: 10 km from Gura Humorului and 35 km from Suceava Airport. Phone and WhatsApp: +40 751 425 215.",
+  },
   nav: {
     home: "Home",
     cazare: "Stay",

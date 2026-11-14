@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { StructuredData } from "@/components/layout/StructuredData";
 import { ContactBand } from "@/components/sections/ContactBand";
 import { HomeHero } from "@/components/sections/HomeHero";
 import { IntroStatement } from "@/components/sections/IntroStatement";
@@ -8,6 +10,14 @@ import { ServiceBlock } from "@/components/sections/ServiceBlock";
 import { StayActions } from "@/components/sections/StayActions";
 import { Button } from "@/components/ui/Button";
 import { getDictionary, hasLocale, href } from "@/content/i18n";
+import { pageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const t = getDictionary(lang).meta;
+  return pageMetadata({ lang, page: "home", title: t.title, description: t.description });
+}
 
 // Acasă. Figma frames 6:271 (desktop) and 6:262 (mobile); spec in docs/design/specs/acasa.md.
 export default async function Home({ params }: PageProps<"/[lang]">) {
@@ -17,6 +27,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   return (
     <>
+      <StructuredData lang={lang} />
       <HomeHero lang={lang} introId="bun-venit" />
       <IntroStatement id="bun-venit" statement={t.intro.statement} text={t.intro.text} />
 

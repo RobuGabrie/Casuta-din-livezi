@@ -5,6 +5,12 @@ export const ro = {
     description:
       "O căsuță între livezi, masă din gospodărie și un câmp de lavandă în Cacica, Bucovina.",
   },
+  seo: {
+    cazare: "Căsuță de vacanță în Cacica, Bucovina: un dormitor, living, chicinetă, balcon spre dealuri și parcare gratuită. Rezervă direct cu noi sau pe Booking.com și Airbnb.",
+    masa: "Punct Gastronomic Local în Cacica, Bucovina: mâncare gătită în familie, din gospodărie și din sat, fără meniu fix. Rezervă o masă, între 11:00 și 18:00.",
+    lavanda: "Un hectar de lavandă în Cacica, Bucovina, care înflorește de la sfârșitul lui iunie până în iulie. Plimbări, ședințe foto și produse din lavandă.",
+    contact: "Cum ajungi la Căsuța din Livezi, în Cacica, județul Suceava: la 10 km de Gura Humorului și 35 km de Aeroportul Suceava. Telefon și WhatsApp: +40 751 425 215.",
+  },
   nav: {
     home: "Acasă",
     cazare: "Cazare",

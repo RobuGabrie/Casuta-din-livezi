@@ -3,6 +3,7 @@ import { Instrument_Serif, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { getDictionary, hasLocale, locales } from "@/content/i18n";
+import { siteUrl } from "@/lib/seo";
 import "../globals.css";
 
 const serif = Instrument_Serif({
@@ -25,6 +26,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   if (!hasLocale(lang)) return {};
   const t = getDictionary(lang).meta;
   return {
+    metadataBase: new URL(siteUrl),
     title: { default: t.title, template: "%s · Căsuța din Livezi" },
     description: t.description,
   };

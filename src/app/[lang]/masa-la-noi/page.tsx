@@ -10,12 +10,13 @@ import { getDictionary, hasLocale } from "@/content/i18n";
 import { site } from "@/content/site";
 import { ReservationSection } from "@/features/reservations/ReservationSection";
 import { callHref } from "@/lib/contact";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/masa-la-noi">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const t = getDictionary(lang);
-  return { title: t.nav.masa, description: t.table.story.lead };
+  return pageMetadata({ lang, page: "masa", title: t.nav.masa, description: t.seo.masa });
 }
 
 // Masa la noi. Figma frames 6:307 (desktop) and 6:299 (mobile); spec in docs/design/specs/masa-la-noi.md.

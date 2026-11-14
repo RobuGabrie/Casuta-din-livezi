@@ -5,12 +5,13 @@ import { MapSection } from "@/components/sections/MapSection";
 import { SideTitle } from "@/components/sections/SideTitle";
 import { getDictionary, hasLocale } from "@/content/i18n";
 import { site } from "@/content/site";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contact">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const t = getDictionary(lang);
-  return { title: t.nav.contact, description: t.contactPage.directions.lead };
+  return pageMetadata({ lang, page: "contact", title: t.nav.contact, description: t.seo.contact });
 }
 
 // Contact. Figma frames 6:337 (desktop) and 6:331 (mobile); spec in docs/design/specs/lavanda-contact.md.
