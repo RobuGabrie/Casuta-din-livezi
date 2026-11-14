@@ -9,7 +9,7 @@ export const en: typeof ro = {
   },
   seo: {
     cazare: "A holiday cottage in Cacica, Bucovina: one bedroom, living room, kitchenette, a balcony facing the hills and free parking. Book directly with us or on Booking.com and Airbnb.",
-    masa: "A Local Gastronomic Point in Cacica, Bucovina: food cooked as a family, from our farm and the village, with no fixed menu. Book a table between 11:00 and 18:00.",
+    masa: "A registered farmhouse kitchen (Punct Gastronomic Local) in Cacica, Bucovina: food cooked as a family, from our farm and the village, with no fixed menu. Book a table between 11:00 and 18:00.",
     lavanda: "A hectare of lavender in Cacica, Bucovina, in bloom from late June into July. Walks, photo sessions and lavender goods.",
     contact: "How to reach Căsuța din Livezi in Cacica, Suceava County: 10 km from Gura Humorului and 35 km from Suceava Airport. Phone and WhatsApp: +40 751 425 215.",
   },
@@ -37,7 +37,7 @@ export const en: typeof ro = {
     tagline: "Our family's place.",
   },
   footer: {
-    tagline: "Our family's place. A little quiet for you.",
+    tagline: "Our family's place. A little peace and quiet for you.",
     place: "Cacica, Bucovina",
     linksLabel: "Pages",
     socialLabel: "Social media",
@@ -50,12 +50,12 @@ export const en: typeof ro = {
     },
     intro: {
       statement: ["At the end of the road,", "the quiet begins."],
-      text: "We are a family from Cacica, with an orchard, a home kitchen and a lavender field. We welcome you with the best we have, at the pace of the place.",
+      text: "We are a family from Cacica, with an orchard, a home kitchen and a lavender field. We welcome you with the best we have, at an unhurried village pace.",
     },
     stay: {
       index: "01 / Stay",
       title: ["A cottage, all yours."],
-      text: "Mornings looking out over the hills and long evenings in the garden. A simple place for being together.",
+      text: "Mornings looking out over the hills and long evenings in the garden. A simple place to be together.",
       facts: ["1 bedroom · living room · kitchenette", "Balcony · garden · free parking"],
       booking: "Book on Booking.com",
       airbnb: "Book on Airbnb",
@@ -66,7 +66,7 @@ export const en: typeof ro = {
       index: "02 / Our table",
       title: ["From the garden,", "to our table."],
       text: "We cook as a family, with produce from our farm and the village. There is no fixed menu: the season tells us what goes on the table.",
-      facts: ["Local Gastronomic Point", "Tables looking out on the orchard"],
+      facts: ["Farmhouse kitchen", "Tables overlooking the orchard"],
       action: "Book a table",
       photoAlt: "The dining room with large windows onto the orchard and hills",
     },
@@ -101,7 +101,7 @@ export const en: typeof ro = {
       note: "Book with us by phone, or online on Booking.com and Airbnb.",
     },
     gallery: {
-      title: "A little of our place",
+      title: "A glimpse of our place",
       caption: "The living room with the big table, the attic bedroom and the bathroom · Tap a photo to enlarge it.",
       photos: [
         { file: "interior-09", label: "Living room", alt: "The living room with the big table, the sofa and the wooden attic gallery" },
@@ -133,7 +133,7 @@ export const en: typeof ro = {
         { icon: "house", title: "1 bedroom & living room", text: "Room to rest and time together." },
         { icon: "kitchen", title: "Kitchenette", text: "For your coffee and little routines." },
         { icon: "sun", title: "Sunny balcony & terrace", text: "Views over the garden and mountains." },
-        { icon: "parking", title: "Free private parking", text: "A space for your car, on the farm." },
+        { icon: "parking", title: "Free private parking", text: "Room for your car, right on the property." },
         { icon: "snow", title: "Air conditioning", text: "Comfortable on hot days too." },
         { icon: "leaf", title: "Garden & evenings outdoors", text: "Outdoor fireplace and picnic area." },
       ],
@@ -158,16 +158,16 @@ export const en: typeof ro = {
   },
   table: {
     hero: {
-      index: "Local Gastronomic Point · Cacica",
+      index: "Farmhouse kitchen · Cacica",
       title: "Our table",
       lead: "Local food. Cooked as a family.",
       photoAlt: "The dining room with large windows onto the orchard and hills",
     },
     story: {
       label: "How we cook",
-      title: ["What the garden gives,", "what the family knows."],
-      lead: "Here, a meal starts on the farm. We cook with produce from our land and good things from people in the village.",
-      text: "There is no fixed menu. Dishes change with the season and with what the garden gives. Tell us ahead if you have allergies or preferences.",
+      title: ["Garden-grown,", "family-cooked."],
+      lead: "Here, a meal starts on the farm. We cook with produce from our land and good things from our neighbours in the village.",
+      text: "There is no fixed menu. Dishes change with the season and with what the garden gives. Let us know in advance if you have allergies or preferences.",
       action: "Book a table",
       photoAlt: "A basket of home-made bread wrapped in a cloth embroidered with “Căsuța din Livezi” and a sprig of lavender",
     },
@@ -251,14 +251,14 @@ export const en: typeof ro = {
     },
     contact: {
       title: "See you between the rows?",
-      text: "For blooming, visits and photos, the easiest is to talk.",
+      text: "For blooms, visits and photos, it's easiest to just talk to us.",
       action: "Ask about photo sessions",
       whatsappText: "Hello! I'd like to ask about a photo session in the lavender field.",
     },
   },
   contactPage: {
-    title: "The way to us.",
-    subtitle: "We're waiting for you in Cacica.",
+    title: "The road to us.",
+    subtitle: "We look forward to seeing you in Cacica.",
     address: ["Cacica, Suceava County", "Bucovina, Romania"],
     phoneLabel: "Phone & WhatsApp",
     emailLabel: "Email",

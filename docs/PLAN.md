@@ -95,7 +95,7 @@ and say what changed (for example `feat(home): add service blocks`).
 | 6 | Lavanda and Contact | Both pages, map |
 | 7 | Table requests | Form with its 4 states, sent to the owner by WhatsApp and email (docs/notifications.md) |
 | 8 | ~~Admin~~ | Dropped for now (owner decision): WhatsApp and email are enough. The Figma screen stays for later |
-| 9 | Quality pass | Search engine data, speed, keyboard and screen reader checks, English text review |
+| 9 | Quality pass | Done: metadata, share images, sitemap, robots, structured data, 404 page, site icon, skip link and focus rings, AVIF photos, English review. Lighthouse 97–100 everywhere; axe finds no problems |
 | 10 | Publish | Server, domain, HTTPS, automatic deploy, backup of the database |
 
 After milestone 3 we stop and compare with Figma before building the other pages,
