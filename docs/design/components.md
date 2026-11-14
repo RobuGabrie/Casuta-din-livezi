@@ -49,6 +49,18 @@ Figma glitches handled in code (see `specs/acasa.md`): the hero numbers in zero-
 boxes, the 1px desktop list rules, and the "Pe fotografie" button variant showing
 "Rezervă o masă" instead of its own label.
 
+## Cazare sections → `src/components/sections/`
+
+Measured in `specs/cazare.md`: `PageHero` (also for Masa la noi and Lavanda),
+`SplitIntro`, `Gallery` + `Lightbox`, `FacilitiesPanel`, `InfoColumns`, `SeasonNote`,
+`MapAside`, `StickyBookingBar`. `StayActions` holds the stay's booking buttons
+(Rezervă cu noi, Booking.com, Airbnb) for every page that books the cottage.
+
+Choices not drawn in Figma: the enlarged view shows whole photos (not cropped), with an
+ink backdrop at 80%, arrow keys and Escape. The mobile booking bar holds two buttons.
+One footer layout everywhere (the Acasă version); the Cazare frames order it slightly
+differently.
+
 ## Service block ("Servicii · două așezări")
 
 Two mirrored layouts: text left with photo right, and photo left with text right.

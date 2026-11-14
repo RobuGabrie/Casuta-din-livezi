@@ -17,6 +17,13 @@
 
   /* No text-wrap balancing: lines must break where they break in Figma. */
 
+  /* Keep the footer clear of the mobile booking bar (StickyBookingBar). */
+  @media (width < 64rem) {
+    body:has([data-sticky-bar]) {
+      padding-bottom: 84px;
+    }
+  }
+
   :focus-visible {
     outline: 2px solid var(--color-forest);
     outline-offset: 2px;

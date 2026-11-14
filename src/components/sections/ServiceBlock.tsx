@@ -22,7 +22,7 @@ export function ServiceBlock({
   title: readonly string[];
   text: string;
   facts: readonly string[];
-  /** One or more buttons, 12px apart. */
+  /** The button(s); wrap several in a flex row with a 12px gap (see StayActions). */
   actions: ReactNode;
   photo: { src: string; alt: string };
   photoSide: "left" | "right";
