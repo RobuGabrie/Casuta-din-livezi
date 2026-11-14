@@ -15,15 +15,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1,
-  h2,
-  h3 {
-    text-wrap: balance;
-  }
-
-  p {
-    text-wrap: pretty;
-  }
+  /* No text-wrap balancing: lines must break where they break in Figma. */
 
   :focus-visible {
     outline: 2px solid var(--color-forest);

@@ -23,7 +23,7 @@ export function SiteFooter({ lang }: { lang: Locale }) {
         <p className="type-body">{t.footer.tagline}</p>
 
         <nav aria-label={t.footer.linksLabel}>
-          <ul className="type-nav grid grid-cols-[repeat(2,150px)] gap-x-6 gap-y-4 lg:grid-cols-[repeat(4,160px)]">
+          <ul className="type-nav grid grid-cols-[repeat(2,minmax(0,150px))] gap-x-6 gap-y-4 lg:grid-cols-[repeat(4,160px)]">
             {footerPages.map((p) => (
               <li key={p}>
                 <Link href={href(lang, p)} className="hover:underline hover:underline-offset-4">

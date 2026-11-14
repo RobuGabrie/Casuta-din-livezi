@@ -6,10 +6,12 @@
 export const site = {
   name: "Căsuța din Livezi",
   bookingUrl: "https://www.booking.com/hotel/ro/casuta-din-livezi-suceava2.html",
+  // TODO: Airbnb listing address. The Airbnb button stays hidden while empty.
+  airbnbUrl: "" as string,
   // TODO: real phone / WhatsApp number in international format.
-  phone: "",
+  phone: "" as string,
   // TODO: real email address.
-  email: "",
+  email: "" as string,
   facebookUrl: "https://www.facebook.com/Casutadinlivezi",
   // Two Instagram accounts: one for the stay, one for the kitchen (PGL).
   // The footer's single Instagram link (as in Figma) goes to the stay account;

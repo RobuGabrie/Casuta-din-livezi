@@ -38,6 +38,17 @@ Full-screen forest panel. Wordmark and a close "×" on top. Links in large serif
 Acasă, Cazare, Masa la noi, Lavanda, Contact. Then "RO / EN" and two short lines
 ("Cacica, Bucovina" / "Un loc al familiei noastre.").
 
+## Home sections → `src/components/sections/`
+
+Measured in `specs/acasa.md`: `HomeHero`, `IntroStatement` ("Bun venit"),
+`ServiceBlock`, `PhotoBand` (Lavanda band), `PlacesList` ("În apropiere"),
+`ContactBand`. Shared pieces in `src/components/ui/`: `PhotoContrast` (the gradient
+over photos), `MapImage` (map with attribution), `Lines` (Figma line breaks).
+
+Figma glitches handled in code (see `specs/acasa.md`): the hero numbers in zero-width
+boxes, the 1px desktop list rules, and the "Pe fotografie" button variant showing
+"Rezervă o masă" instead of its own label.
+
 ## Service block ("Servicii · două așezări")
 
 Two mirrored layouts: text left with photo right, and photo left with text right.

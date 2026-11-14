@@ -24,17 +24,23 @@ const variants: Record<ButtonVariant, string> = {
     "border border-paper text-paper hover:bg-paper hover:text-forest focus-visible:outline-paper",
 };
 
-type Common = { variant?: ButtonVariant; className?: string; children: ReactNode };
+type Common = {
+  variant?: ButtonVariant;
+  /** Show the external-link arrow. Always on for "booking". */
+  arrow?: boolean;
+  className?: string;
+  children: ReactNode;
+};
 type AsLink = Common & { href: string } & Omit<ComponentProps<"a">, "href" | "className" | "children">;
 type AsButton = Common & { href?: undefined } & Omit<ComponentProps<"button">, "className" | "children">;
 
 export function Button(props: AsLink | AsButton) {
-  const { variant = "primary", className, children, ...rest } = props;
+  const { variant = "primary", arrow, className, children, ...rest } = props;
   const classes = cn(base, variants[variant], className);
   const content = (
     <>
       {children}
-      {variant === "booking" && <ExternalLinkIcon />}
+      {(variant === "booking" || arrow) && <ExternalLinkIcon />}
     </>
   );
 
