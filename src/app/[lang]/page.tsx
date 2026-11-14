@@ -5,10 +5,9 @@ import { IntroStatement } from "@/components/sections/IntroStatement";
 import { PhotoBand } from "@/components/sections/PhotoBand";
 import { PlacesList } from "@/components/sections/PlacesList";
 import { ServiceBlock } from "@/components/sections/ServiceBlock";
+import { StayActions } from "@/components/sections/StayActions";
 import { Button } from "@/components/ui/Button";
 import { getDictionary, hasLocale, href } from "@/content/i18n";
-import { site } from "@/content/site";
-import { callHref } from "@/lib/contact";
 
 // Acasă. Figma frames 6:271 (desktop) and 6:262 (mobile); spec in docs/design/specs/acasa.md.
 export default async function Home({ params }: PageProps<"/[lang]">) {
@@ -29,19 +28,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         photo={{ src: "/photos/cazare/casa-de-sus-cu-dealuri.jpg", alt: t.stay.photoAlt }}
         photoSide="right"
         photoAspect="tall"
-        actions={
-          <>
-            <Button href={callHref(lang)}>{t.stay.direct}</Button>
-            <Button href={site.bookingUrl} variant="secondary" arrow>
-              {t.stay.booking}
-            </Button>
-            {site.airbnbUrl && (
-              <Button href={site.airbnbUrl} variant="secondary" arrow>
-                {t.stay.airbnb}
-              </Button>
-            )}
-          </>
-        }
+        actions={<StayActions lang={lang} />}
       />
 
       <ServiceBlock
