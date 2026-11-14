@@ -18,6 +18,7 @@ export function StoryBlock({
   photo,
   photoSide,
   photoAspect,
+  spacing = "both",
 }: {
   label?: string;
   title: readonly string[];
@@ -29,13 +30,16 @@ export function StoryBlock({
   photo: { src: string; alt: string };
   photoSide: "left" | "right";
   /** Desktop photo aspect, Figma width/height, e.g. "736/800". */
-  photoAspect: "736/800" | "736/680";
+  photoAspect: "736/800" | "736/680" | "736/720";
+  /** "both": 120/64 above and below (Masa la noi). "bottom": only below (Lavanda). */
+  spacing?: "both" | "bottom";
 }) {
   return (
     <section>
       <Container
         className={cn(
-          "grid items-center gap-6 py-16 lg:gap-x-[clamp(64px,8.889vw,128px)] lg:py-[120px]",
+          "grid items-center gap-6 pb-16 lg:gap-x-[clamp(64px,8.889vw,128px)] lg:pb-[120px]",
+          spacing === "both" && "pt-16 lg:pt-[120px]",
           photoSide === "right"
             ? "lg:grid-cols-[minmax(0,448fr)_minmax(0,736fr)]"
             : "lg:grid-cols-[minmax(0,736fr)_minmax(0,448fr)]",
@@ -47,7 +51,9 @@ export function StoryBlock({
           sizes="(min-width: 64rem) 51vw, 100vw"
           className={cn(
             "h-[440px] lg:h-auto",
-            photoAspect === "736/800" ? "lg:aspect-[736/800]" : "lg:aspect-[736/680]",
+            { "736/800": "lg:aspect-[736/800]", "736/680": "lg:aspect-[736/680]", "736/720": "lg:aspect-[736/720]" }[
+              photoAspect
+            ],
             photoSide === "right" && "lg:order-2",
           )}
         />

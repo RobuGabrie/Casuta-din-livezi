@@ -69,6 +69,14 @@ feature in `src/features/reservations/` (`ReservationSection`, `ReservationForm`
 Form controls in `src/components/ui/Field.tsx`: `Field`, `TextInput`, `TextArea`,
 `Select`. Date and time are lists (not the browser's pickers) so they look like Figma.
 
+## Lavanda and Contact sections
+
+Measured in `specs/lavanda-contact.md`: `CallBand` (forest call-to-action),
+`SideTitle` (heading beside text), `MapSection` (full-width map, button, caption),
+`ContactIntro`. `SplitIntro` now takes its details as children; `StoryBlock` has a
+`spacing` option and the 736×720 photo size; `PageHero` has an optional index and note.
+Call and WhatsApp links come from `src/lib/contact.ts`.
+
 ## Service block ("Servicii · două așezări")
 
 Two mirrored layouts: text left with photo right, and photo left with text right.
