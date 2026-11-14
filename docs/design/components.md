@@ -61,6 +61,14 @@ ink backdrop at 80%, arrow keys and Escape. The mobile booking bar holds two but
 One footer layout everywhere (the Acasă version); the Cazare frames order it slightly
 differently.
 
+## Masa la noi sections
+
+Measured in `specs/masa-la-noi.md`: `StoryBlock` (photo beside a story; "Cum gătim"
+and "Evenimente"), `DishGallery`, `NotePanel` (stone panel), and the reservation
+feature in `src/features/reservations/` (`ReservationSection`, `ReservationForm`).
+Form controls in `src/components/ui/Field.tsx`: `Field`, `TextInput`, `TextArea`,
+`Select`. Date and time are lists (not the browser's pickers) so they look like Figma.
+
 ## Service block ("Servicii · două așezări")
 
 Two mirrored layouts: text left with photo right, and photo left with text right.
