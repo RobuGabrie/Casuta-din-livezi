@@ -25,6 +25,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
+      # PageProps, LayoutProps and next/root-params types are generated, not committed.
+      - run: npx next typegen
       - run: npx tsc --noEmit
 
   image:
