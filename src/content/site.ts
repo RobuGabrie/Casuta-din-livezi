@@ -7,8 +7,8 @@ export const site = {
   name: "Căsuța din Livezi",
   bookingUrl: "https://www.booking.com/hotel/ro/casuta-din-livezi-suceava2.html",
   airbnbUrl: "https://www.airbnb.com/rooms/1540500135713667830" as string,
-  // TODO: real phone / WhatsApp number in international format.
-  phone: "" as string,
+  // Phone and WhatsApp.
+  phone: "+40 751 425 215" as string,
   // TODO: real email address.
   email: "" as string,
   facebookUrl: "https://www.facebook.com/Casutadinlivezi",

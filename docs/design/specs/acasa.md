@@ -64,11 +64,14 @@ button → 1px rule in line colour.
 | Photo | casa-de-sus-cu-dealuri | sala-panorama-1 |
 
 Owner requests (not in Figma): the stay block has three buttons, 12px apart, wrapping
-to a new line when they don't fit:
-1. "Rezervă pe Booking.com ↗" (booking), as in Figma.
-2. "Rezervă pe Airbnb ↗" (secondary with arrow), when `site.airbnbUrl` is set.
-3. "Rezervă cu noi" (secondary): calls the family directly. It is a tel: link once
-   `site.phone` is set; until then it opens the Contact page.
+to a new line when they don't fit. Direct bookings come first, because they cost the
+family no commission:
+1. "Rezervă cu noi" (primary): calls the family (tel: link from `site.phone`; the
+   Contact page if the phone is ever empty).
+2. "Rezervă pe Booking.com ↗" (secondary with arrow).
+3. "Rezervă pe Airbnb ↗" (secondary with arrow), when `site.airbnbUrl` is set.
+This replaces Figma's single filled Booking button. Apply the same order wherever the
+stay is booked (Cazare page, fixed mobile bar).
 
 ## Lavanda → `PhotoBand`
 

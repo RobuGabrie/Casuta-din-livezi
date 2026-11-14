@@ -31,7 +31,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         photoAspect="tall"
         actions={
           <>
-            <Button href={site.bookingUrl} variant="booking">
+            <Button href={callHref(lang)}>{t.stay.direct}</Button>
+            <Button href={site.bookingUrl} variant="secondary" arrow>
               {t.stay.booking}
             </Button>
             {site.airbnbUrl && (
@@ -39,9 +40,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 {t.stay.airbnb}
               </Button>
             )}
-            <Button href={callHref(lang)} variant="secondary">
-              {t.stay.direct}
-            </Button>
           </>
         }
       />

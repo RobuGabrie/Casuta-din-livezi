@@ -8,7 +8,7 @@ import { site } from "@/content/site";
 /** Forest band with address, phone, email and the village map. */
 export function ContactBand({ lang }: { lang: Locale }) {
   const t = getDictionary(lang).contactBand;
-  const pending = !site.phone;
+  const pending = !site.phone || !site.email;
 
   return (
     <section className="bg-forest text-paper">
