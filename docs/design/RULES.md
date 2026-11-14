@@ -17,7 +17,7 @@ this folder is a saved copy of it so the rules are at hand in every session.
 2. Use only the tokens in `tokens.md`. If a value is missing, read it from Figma and
    add it there first. Never guess a colour, size or spacing.
 3. Copy the text from Figma exactly, including Romanian diacritics (ă â î ș ț).
-4. After building, run `scripts/screenshots.sh http://localhost:3000 /ro/<page>` with
+4. After building, run `node scripts/screenshots.mjs http://localhost:3000 /ro/<page>` with
    the site running. It saves the page at 390px and 1440px wide in `.screenshots/`.
    Compare them with the pictures in `screens/` and fix every visible difference
    before committing.
