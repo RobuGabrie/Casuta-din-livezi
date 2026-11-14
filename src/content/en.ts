@@ -28,7 +28,6 @@ export const en: typeof ro = {
     linksLabel: "Pages",
     socialLabel: "Social media",
   },
-  placeholder: "This page is being built.",
   home: {
     hero: {
       place: "Cacica, Bucovina · Our home",
@@ -206,6 +205,61 @@ export const en: typeof ro = {
     privacy: ["We use your details only to answer your request.", "No online payment is taken."],
     submit: "Send request",
   },
+  lavender: {
+    hero: {
+      title: "Lavender",
+      lead: ["A hectare of quiet,", "right in our yard."],
+      note: "The field in autumn · a photo of it in bloom, coming soon",
+      photoAlt: "Rows of lavender in the yard in autumn, with the forest behind",
+    },
+    season: {
+      statement: ["When it turns purple."],
+      when: "From late June into July.",
+      text: "Blooming depends on the weather, and every summer has its own pace. Call us before you set off and we'll tell you how the field looks. The lavender is a bonus to your visit, not a service to book.",
+    },
+    walk: {
+      label: "A walk in the field",
+      title: ["Small steps.", "Air that smells of summer."],
+      text: "Take it slowly between the rows and enjoy the view. A hectare of lavender, with the hills of Bucovina on the horizon.",
+      photoAlt: "Rows of lavender, with autumn trees and hills behind",
+    },
+    photos: {
+      label: "Photo sessions",
+      title: ["A frame for", "your memories."],
+      text: "The white carved wooden frame waits for you in the field. For a photo session, we talk beforehand about the season and the right time of day.",
+      photoAlt: "The white carved wooden frame in the middle of the lavender field, at sunset",
+    },
+    goods: {
+      label: "Lavender goods",
+      title: ["A little summer,", "to take home."],
+      text: "Ask us what we make from the lavender harvest. What's available changes with the season.",
+      photoAlt: "Sunset over the orchard",
+    },
+    contact: {
+      title: "See you between the rows?",
+      text: "For blooming, visits and photos, the easiest is to talk.",
+      action: "Ask about photo sessions",
+      whatsappText: "Hello! I'd like to ask about a photo session in the lavender field.",
+    },
+  },
+  contactPage: {
+    title: "The way to us.",
+    subtitle: "We're waiting for you in Cacica.",
+    address: ["Cacica, Suceava County", "Bucovina, Romania"],
+    phoneLabel: "Phone & WhatsApp",
+    emailLabel: "Email",
+    photoAlt: "The pond in the yard, with the wooden gazebo and willows",
+    directions: {
+      title: "Getting here",
+      lead: "From Gura Humorului, Cacica is about 10 km away. If you fly, Suceava Airport is about 35 km away. The cottage has free private parking.",
+      text: "The Cacica Salt Mine and Basilica are about 15 minutes away on foot. Voroneț Monastery is 25 km away.",
+    },
+    map: {
+      action: "Open Google Maps",
+      caption: "Map of Cacica · the exact position of the property will be confirmed.",
+    },
+  },
+  actions: { call: "Call us", whatsapp: "WhatsApp" },
   contactBand: {
     title: "Come and see us.",
     address: ["Cacica, Suceava County", "Bucovina, Romania"],

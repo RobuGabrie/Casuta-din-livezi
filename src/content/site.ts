@@ -10,6 +10,8 @@ export const site = {
   // Phone and WhatsApp.
   phone: "+40 751 425 215" as string,
   email: "robumihaela69@gmail.com" as string,
+  // Google Maps search for the place, until the exact pin is confirmed.
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=C%C4%83su%C8%9Ba%20din%20Livezi%20Cacica",
   facebookUrl: "https://www.facebook.com/Casutadinlivezi",
   // Two Instagram accounts: one for the stay, one for the kitchen (PGL).
   // The footer's single Instagram link (as in Figma) goes to the stay account;

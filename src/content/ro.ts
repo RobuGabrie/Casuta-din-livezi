@@ -26,7 +26,6 @@ export const ro = {
     linksLabel: "Pagini",
     socialLabel: "Rețele sociale",
   },
-  placeholder: "Pagina este în lucru.",
   home: {
     hero: {
       place: "Cacica, Bucovina · La noi, acasă",
@@ -205,6 +204,61 @@ export const ro = {
     privacy: ["Folosim datele doar pentru a răspunde cererii tale.", "Nu se face nicio plată online."],
     submit: "Trimite cererea",
   },
+  lavender: {
+    hero: {
+      title: "Lavanda",
+      lead: ["Un hectar de tihnă,", "chiar în curtea noastră."],
+      note: "Câmpul toamna · fotografia înfloririi, în curând",
+      photoAlt: "Rândurile de lavandă din curte, toamna, cu pădurea în spate",
+    },
+    season: {
+      statement: ["Când se îmbracă în mov."],
+      when: "De la sfârșitul lui iunie, până în iulie.",
+      text: "Înflorirea depinde de vreme, iar fiecare vară are ritmul ei. Sună-ne înainte de drum, ca să-ți spunem cum arată câmpul. Lavanda este o bucurie în plus a vizitei, nu un serviciu de rezervat.",
+    },
+    walk: {
+      label: "Plimbare prin câmp",
+      title: ["Pași mici.", "Aer cu parfum de vară."],
+      text: "Ia-o încet printre rânduri și bucură-te de peisaj. Un hectar de lavandă, cu dealurile Bucovinei la orizont.",
+      photoAlt: "Rânduri de lavandă, cu copaci de toamnă și dealuri în fundal",
+    },
+    photos: {
+      label: "Ședințe foto",
+      title: ["O ramă pentru", "amintirile voastre."],
+      text: "Rama albă din lemn sculptat vă așteaptă în câmp. Pentru o ședință foto, povestim înainte despre sezon și momentul potrivit al zilei.",
+      photoAlt: "Rama albă din lemn sculptat, în mijlocul câmpului de lavandă, la apus",
+    },
+    goods: {
+      label: "Produse din lavandă",
+      title: ["Un pic de vară,", "luat acasă."],
+      text: "Întreabă-ne ce pregătim din recolta de lavandă. Disponibilitatea produselor se schimbă cu sezonul.",
+      photoAlt: "Apus de soare peste livadă",
+    },
+    contact: {
+      title: "Ne vedem printre rânduri?",
+      text: "Pentru înflorire, vizite și fotografii, cel mai simplu este să povestim.",
+      action: "Întreabă de ședințe foto",
+      whatsappText: "Bună ziua! Aș vrea să întreb despre o ședință foto în câmpul de lavandă.",
+    },
+  },
+  contactPage: {
+    title: "Drumul până la noi.",
+    subtitle: "Te așteptăm în Cacica.",
+    address: ["Cacica, județul Suceava", "Bucovina, România"],
+    phoneLabel: "Telefon & WhatsApp",
+    emailLabel: "E-mail",
+    photoAlt: "Iazul din curte, cu foișorul de lemn și sălciile",
+    directions: {
+      title: "Cum ajungi",
+      lead: "Din Gura Humorului, Cacica este la aproximativ 10 km. Dacă vii cu avionul, Aeroportul Suceava se află la circa 35 km. La căsuță ai parcare privată gratuită.",
+      text: "Salina și Bazilica din Cacica sunt la aproximativ 15 minute de mers pe jos. Mănăstirea Voroneț se află la 25 km.",
+    },
+    map: {
+      action: "Deschide Google Maps",
+      caption: "Harta localității Cacica · poziția exactă a proprietății urmează să fie confirmată.",
+    },
+  },
+  actions: { call: "Sună-ne", whatsapp: "WhatsApp" },
   contactBand: {
     title: "Hai pe la noi.",
     address: ["Cacica, județul Suceava", "Bucovina, România"],
