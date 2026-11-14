@@ -12,12 +12,6 @@ import { StickyBookingBar } from "@/components/sections/StickyBookingBar";
 import { getDictionary, hasLocale } from "@/content/i18n";
 import { callHref } from "@/lib/contact";
 
-const galleryPhotos = [
-  "/photos/cazare/interior-09.jpg",
-  "/photos/cazare/interior-03.jpg",
-  "/photos/cazare/interior-05.jpg",
-];
-
 export async function generateMetadata({ params }: PageProps<"/[lang]/cazare">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
@@ -52,7 +46,8 @@ export default async function Cazare({ params }: PageProps<"/[lang]/cazare">) {
       <Gallery
         title={t.gallery.title}
         caption={t.gallery.caption}
-        photos={t.gallery.photos.map((p, i) => ({ ...p, src: galleryPhotos[i] }))}
+        photos={t.gallery.photos.map((p) => ({ ...p, src: `/photos/cazare/${p.file}.jpg` }))}
+        featured={t.gallery.featured}
         labels={t.gallery}
       />
       <FacilitiesPanel title={t.facilities.title} items={t.facilities.items} />

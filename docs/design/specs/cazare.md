@@ -31,7 +31,8 @@ Photo `casa-de-sus-cu-dealuri`. Contrast layer differs from Acasă: ink 55% → 
 Owner requests (not in Figma): the buttons are the stay set from `specs/acasa.md`
 ("Rezervă cu noi" first, then Booking.com and Airbnb). Figma's caption "Disponibilitatea,
 tarifele și rezervările sunt exclusiv pe Booking.com." is no longer true, so it reads
-"Rezervă direct cu noi, la telefon, sau online pe Booking.com și Airbnb."
+"Rezervă cu noi, la telefon, sau online pe Booking.com și Airbnb." The rating is
+9,7 / 10 (owner, replacing Figma's 9,5).
 
 ## Galerie → `Gallery` + `Lightbox`
 
@@ -42,7 +43,9 @@ tarifele și rezervările sunt exclusiv pe Booking.com." is no longer true, so i
   bottom padding.
 - Caption "Livingul cu masa mare, dormitorul de la mansardă și baia · Apasă o
   fotografie pentru a o mări." (Caption, muted).
-- Each photo opens the enlarged view at that photo.
+- Each photo opens the enlarged view at that photo. The enlarged view moves through all
+  15 stay photos (11 inside, 4 of the yard), not only the three on the page; their
+  order and labels are in `src/content/ro.ts` (`stay.gallery.photos`). Owner decision.
 
 Enlarged view (`Lightbox`):
 - Desktop: forest panel 1100×766, padding 40, 24 between rows. Top row: "Căsuța din
