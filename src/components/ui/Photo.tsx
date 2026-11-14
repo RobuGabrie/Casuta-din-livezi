@@ -3,7 +3,8 @@ import { cn } from "@/lib/cn";
 
 /**
  * A photo that fills its box, cropped like an image fill in Figma.
- * The box size comes from `className` (a height or an aspect ratio).
+ * The box size comes from `className` (a height or an aspect ratio). The box is
+ * `relative`; to position it, wrap it rather than passing `absolute`.
  * Photos have no rounded corners (docs/design/RULES.md).
  */
 export function Photo({

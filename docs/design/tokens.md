@@ -30,6 +30,7 @@ unless noted. Sizes are font size / line height in px.
 | Service link | Serif | 64/64 | 112/116 | The three words on the home hero |
 | Statement | Serif | 44/48 | 92/96 | Opening statement under the hero |
 | H2 | Serif | 44/48 | 76/80 | Section headings |
+| Footer wordmark | Serif | 64/64 | 92/96 | "Căsuța din Livezi" in the footer |
 | Wordmark | Serif | 26/30 | 32/36 | "Căsuța din Livezi" in the header |
 | H3 | Sans Medium | 20/28 | 20/28 | Small headings, list titles |
 | Body L | Sans Regular | 18/30 | 18/30 | Lead paragraphs |
@@ -66,6 +67,6 @@ Figma size at 1440px.
 
 Colours are Tailwind utilities (`bg-forest`, `text-muted`, `border-line`). Type
 styles are single classes: `type-display`, `type-service-link`, `type-statement`,
-`type-h2`, `type-wordmark`, `type-h3`, `type-body-l`, `type-body`, `type-button`,
+`type-h2`, `type-footer-wordmark`, `type-wordmark`, `type-h3`, `type-body-l`, `type-body`, `type-button`,
 `type-nav`, `type-accent`, `type-index`, `type-caption`, `type-attribution`.
 Compare the result with Figma at `/styleguide`.

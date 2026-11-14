@@ -22,7 +22,9 @@ States not drawn in Figma, chosen here:
 - Keyboard focus: 2px outline, 2px away from the button, in the label's contrast colour.
 - Disabled / sending: 60% opacity, no pointer.
 
-## Header (antet)
+## Header (antet) → `src/components/layout/SiteHeader.tsx`
+
+Full measurements: `specs/layout.md`.
 
 Four designed variants: desktop on forest, desktop on paper (also used transparent
 over the hero photo with paper text), mobile on forest, mobile on paper.
@@ -30,7 +32,7 @@ over the hero photo with paper text), mobile on forest, mobile on paper.
 - Desktop right: Cazare, Masa la noi, Lavanda, Contact, then "RO / EN" (Nav style).
 - Mobile right: "RO / EN" and a three-line menu icon.
 
-## Mobile menu (picture: `screens/meniu-mobil-deschis.jpg`)
+## Mobile menu → `src/components/layout/MobileMenu.tsx` (picture: `screens/meniu-mobil-deschis.jpg`)
 
 Full-screen forest panel. Wordmark and a close "×" on top. Links in large serif:
 Acasă, Cazare, Masa la noi, Lavanda, Contact. Then "RO / EN" and two short lines
@@ -69,7 +71,7 @@ title (H3-like, Manrope Medium) and one muted line.
 Forest background. Left: H2 "Hai pe la noi.", address, phone and email, an
 `onPhoto` button. Right: the map.
 
-## Footer (subsol)
+## Footer (subsol) → `src/components/layout/SiteFooter.tsx`
 
 Forest background, hairline on top, large serif wordmark, one tagline, four nav
 links, Facebook and Instagram icons, then text links and the copyright line.

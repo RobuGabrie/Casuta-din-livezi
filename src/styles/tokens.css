@@ -94,6 +94,18 @@
   }
 }
 
+/* Footer wordmark: Display mobile size on mobile, Statement size on desktop. */
+@utility type-footer-wordmark {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  @media (width >= 64rem) {
+    font-size: clamp(64px, 6.389vw, 92px);
+    line-height: calc(96 / 92);
+  }
+}
+
 @utility type-h3 {
   font-family: var(--font-sans);
   font-weight: 500;
