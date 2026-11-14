@@ -27,11 +27,13 @@ export function HomeHero({ lang, introId }: { lang: Locale; introId: string }) {
 
       <Container className="relative flex h-full flex-col">
         <SiteHeader lang={lang} page="home" tone="onPhoto" rule="paper" />
-        <p className="type-nav mt-[45px] lg:mt-[61px]">{t.home.hero.place}</p>
+        <p id="continut" tabIndex={-1} className="type-nav mt-[45px] outline-none lg:mt-[61px]">
+          {t.home.hero.place}
+        </p>
 
         <h1 className="sr-only">{site.name}</h1>
         <nav
-          aria-label={t.nav.label}
+          aria-label={t.nav.servicesLabel}
           className="mt-auto grid gap-4 lg:grid-cols-[372fr_464fr_412fr] lg:gap-8"
         >
           {services.map((page, i) => (

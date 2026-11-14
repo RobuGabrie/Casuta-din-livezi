@@ -40,6 +40,12 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
   return (
     <html lang={lang} className={`${serif.variable} ${sans.variable}`}>
       <body>
+        <a
+          href="#continut"
+          className="type-button sr-only z-50 rounded-control bg-forest text-paper focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:px-6 focus:py-4"
+        >
+          {getDictionary(lang).nav.skipToContent}
+        </a>
         <main>{children}</main>
         <SiteFooter lang={lang} />
       </body>

@@ -23,6 +23,8 @@ export const ro = {
     masa: "Masa la noi",
     lavanda: "Lavanda",
     contact: "Contact",
+    skipToContent: "Sari la conținut",
+    servicesLabel: "Ce găsești la noi",
     label: "Navigație principală",
     languageLabel: "Limba",
     openMenu: "Deschide meniul",

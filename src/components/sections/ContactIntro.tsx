@@ -19,7 +19,9 @@ export function ContactIntro({ lang }: { lang: Locale }) {
       </Container>
       <section>
         <Container className="flex flex-col gap-16 pt-10 pb-16 lg:pt-16 lg:pb-[120px]">
-          <h1 className="type-display">{t.title}</h1>
+          <h1 id="continut" tabIndex={-1} className="type-display outline-none">
+            {t.title}
+          </h1>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,448fr)_minmax(0,736fr)] lg:items-start lg:gap-x-[clamp(64px,8.889vw,128px)]">
             <div className="flex flex-col items-start gap-6">
               <h2 className="type-h2">{t.subtitle}</h2>

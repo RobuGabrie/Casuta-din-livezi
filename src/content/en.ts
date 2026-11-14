@@ -25,6 +25,8 @@ export const en: typeof ro = {
     masa: "Our table",
     lavanda: "Lavender",
     contact: "Contact",
+    skipToContent: "Skip to content",
+    servicesLabel: "What we offer",
     label: "Main navigation",
     languageLabel: "Language",
     openMenu: "Open menu",

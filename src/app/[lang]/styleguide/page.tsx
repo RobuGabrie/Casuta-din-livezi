@@ -38,7 +38,9 @@ export default function Styleguide() {
   return (
     <Container className="flex flex-col gap-16 py-16">
       <header className="flex flex-col gap-6">
-        <h1 className="type-h2">Sistem vizual / Căsuța din Livezi</h1>
+        <h1 id="continut" className="type-h2">
+          Sistem vizual / Căsuța din Livezi
+        </h1>
         <p className="type-body text-muted">Instrument Serif + Manrope · Paper / Ink / Forest · 390 / 1440</p>
       </header>
 

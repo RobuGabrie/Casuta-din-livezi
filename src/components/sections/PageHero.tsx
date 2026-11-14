@@ -44,8 +44,10 @@ export function PageHero({
       <Container className="relative flex h-full flex-col">
         <SiteHeader lang={lang} page={page} tone="onPhoto" />
         <div
+          id="continut"
+          tabIndex={-1}
           className={cn(
-            "mt-auto",
+            "mt-auto outline-none",
             note ? "pb-8 lg:pb-[30px]" : mobileBottom === 100 ? "pb-[100px] lg:pb-20" : "pb-[60px] lg:pb-20",
           )}
         >

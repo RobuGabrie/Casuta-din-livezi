@@ -25,7 +25,9 @@ export default async function NotFound() {
         <SiteHeader lang={lang} page="home" tone="paper" />
       </Container>
       <Container className="flex flex-col items-start gap-6 pt-10 pb-16 lg:pt-16 lg:pb-[120px]">
-        <h1 className="type-display">{t.notFound.title}</h1>
+        <h1 id="continut" tabIndex={-1} className="type-display outline-none">
+          {t.notFound.title}
+        </h1>
         <p className="type-body-l max-w-[560px] text-muted">{t.notFound.text}</p>
         <Button href={href(lang, "home")}>{t.notFound.home}</Button>
         <p className="type-body mt-4 text-muted">

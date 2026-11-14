@@ -28,4 +28,9 @@
     outline: 2px solid var(--color-forest);
     outline-offset: 2px;
   }
+
+  /* Over photos and on forest bands the text is paper, so the focus ring is too. */
+  .text-paper :focus-visible {
+    outline-color: var(--color-paper);
+  }
 }
