@@ -74,6 +74,62 @@ export const en: typeof ro = {
       ],
     },
   },
+  stay: {
+    hero: {
+      index: "01 / Cacica, Bucovina",
+      title: "Stay",
+      lead: "One cottage. All the quiet, just for you.",
+      photoAlt: "The cottage seen from above, with the hills behind",
+    },
+    intro: {
+      statement: ["Unhurried mornings,", "with the hills at the window."],
+      text: "A bedroom, a living room and a kitchenette for days at your own pace. Step onto the balcony, have your coffee in the garden and leave the rest for tomorrow.",
+      rating: "9.5 / 10  ·  Guest rating on Booking.com",
+      note: "Book directly with us by phone, or online on Booking.com and Airbnb.",
+    },
+    gallery: {
+      title: "A little of our place",
+      caption: "The living room with the big table, the attic bedroom and the bathroom · Tap a photo to enlarge it.",
+      photos: [
+        { label: "Living room", alt: "The living room with the big table, the sofa and the wooden attic gallery" },
+        { label: "Attic bedroom", alt: "The attic bedroom under the wooden ceiling" },
+        { label: "Bathroom", alt: "The bathroom with shower, washbasin and a wood-framed mirror" },
+      ],
+      dialogTitle: "Căsuța din Livezi · Gallery",
+      previous: "Previous",
+      next: "Next",
+      close: "Close gallery",
+      open: "Enlarge photo",
+    },
+    facilities: {
+      title: "Everything you need.",
+      items: [
+        { icon: "house", title: "1 bedroom & living room", text: "Room to rest and time together." },
+        { icon: "kitchen", title: "Kitchenette", text: "For your coffee and little routines." },
+        { icon: "sun", title: "Sunny balcony & terrace", text: "Views over the garden and mountains." },
+        { icon: "parking", title: "Free private parking", text: "A space for your car, on the farm." },
+        { icon: "snow", title: "Air conditioning", text: "Comfortable on hot days too." },
+        { icon: "leaf", title: "Garden & evenings outdoors", text: "Outdoor fireplace and picnic area." },
+      ],
+    },
+    rules: {
+      title: "Good to know",
+      items: [
+        { title: "Arrival & departure", lines: ["Check-in from 15:00", "Check-out by 11:00"] },
+        { title: "A smoke-free house", lines: ["Smoking is not allowed."] },
+        { title: "No pets", lines: ["Thank you for understanding."] },
+      ],
+    },
+    season: {
+      title: "June–July: the lavender is in bloom",
+      text: "In late June and July the garden takes on a different scent. Blooming depends on the weather.",
+    },
+    location: {
+      title: "Find us in Cacica.",
+      lines: ["Suceava County, Bucovina.", "A quiet base for exploring the area."],
+    },
+    bar: { online: "Booking · Airbnb" },
+  },
   contactBand: {
     title: "Come and see us.",
     address: ["Cacica, Suceava County", "Bucovina, Romania"],

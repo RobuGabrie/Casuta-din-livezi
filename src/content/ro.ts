@@ -72,6 +72,62 @@ export const ro = {
       ],
     },
   },
+  stay: {
+    hero: {
+      index: "01 / Cacica, Bucovina",
+      title: "Cazare",
+      lead: "O singură căsuță. Toată liniștea, numai pentru voi.",
+      photoAlt: "Căsuța văzută de sus, cu dealurile în spate",
+    },
+    intro: {
+      statement: ["Dimineți fără grabă,", "cu dealurile la fereastră."],
+      text: "Un dormitor, un living și o chicinetă pentru zile în ritmul vostru. Ieși pe balcon, bea cafeaua în grădină și lasă restul pe mâine.",
+      rating: "9,5 / 10  ·  Evaluarea oaspeților pe Booking.com",
+      note: "Rezervă direct cu noi, la telefon, sau online pe Booking.com și Airbnb.",
+    },
+    gallery: {
+      title: "Un pic din locul nostru",
+      caption: "Livingul cu masa mare, dormitorul de la mansardă și baia · Apasă o fotografie pentru a o mări.",
+      photos: [
+        { label: "Livingul", alt: "Livingul cu masa mare, canapeaua și galeria de lemn de la mansardă" },
+        { label: "Dormitorul de la mansardă", alt: "Dormitorul de la mansardă, sub tavanul de lemn" },
+        { label: "Baia", alt: "Baia cu duș, chiuvetă și oglindă cu ramă de lemn" },
+      ],
+      dialogTitle: "Căsuța din Livezi · Galerie",
+      previous: "Înapoi",
+      next: "Înainte",
+      close: "Închide galeria",
+      open: "Mărește fotografia",
+    },
+    facilities: {
+      title: "Ai tot ce-ți trebuie.",
+      items: [
+        { icon: "house", title: "1 dormitor & living", text: "Spațiu pentru odihnă și timp împreună." },
+        { icon: "kitchen", title: "Chicinetă", text: "Pentru cafeaua și micile voastre obiceiuri." },
+        { icon: "sun", title: "Balcon & terasă la soare", text: "Vedere spre grădină și munte." },
+        { icon: "parking", title: "Parcare privată gratuită", text: "Loc pentru mașină, în gospodărie." },
+        { icon: "snow", title: "Aer condiționat", text: "Confort și în zilele călduroase." },
+        { icon: "leaf", title: "Grădină & seri în aer liber", text: "Șemineu exterior și zonă de picnic." },
+      ],
+    },
+    rules: {
+      title: "Bine de știut",
+      items: [
+        { title: "Sosire & plecare", lines: ["Check-in de la 15:00", "Check-out până la 11:00"] },
+        { title: "O casă fără fum", lines: ["Fumatul nu este permis."] },
+        { title: "Fără animale de companie", lines: ["Îți mulțumim pentru înțelegere."] },
+      ],
+    },
+    season: {
+      title: "Iunie–iulie: lavanda e în floare",
+      text: "La final de iunie și în iulie, grădina capătă alt parfum. Înflorirea depinde de vreme.",
+    },
+    location: {
+      title: "Ne găsești în Cacica.",
+      lines: ["Județul Suceava, Bucovina.", "O bază tihnită pentru a descoperi împrejurimile."],
+    },
+    bar: { online: "Booking · Airbnb" },
+  },
   contactBand: {
     title: "Hai pe la noi.",
     address: ["Cacica, județul Suceava", "Bucovina, România"],
