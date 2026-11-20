@@ -29,6 +29,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     metadataBase: new URL(siteUrl),
     title: { default: t.title, template: "%s · Căsuța din Livezi" },
     description: t.description,
+    // Google Search Console ownership check.
+    verification: { google: "P5Qz_gafA3GX5wbCLx5Oho8M9OG3VIFQCzWxvMY1WS8" },
   };
 }
 
