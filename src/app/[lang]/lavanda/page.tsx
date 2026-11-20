@@ -25,7 +25,7 @@ export default async function Lavanda({ params }: PageProps<"/[lang]/lavanda">) 
   const t = d.lavender;
 
   const stories = [
-    { ...t.walk, src: "/photos/lavanda/randuri-lavanda-toamna.jpg", side: "right" },
+    { ...t.walk, src: "/photos/lavanda/masuta-in-lavanda.jpg", side: "right" },
     { ...t.photos, src: "/photos/lavanda/rama-foto-lavanda-1.jpg", side: "left" },
     { ...t.goods, src: "/photos/lavanda/apus-peste-livada.jpg", side: "right" },
   ] as const;
@@ -38,7 +38,7 @@ export default async function Lavanda({ params }: PageProps<"/[lang]/lavanda">) 
         title={t.hero.title}
         lead={t.hero.lead}
         note={t.hero.note}
-        photo={{ src: "/photos/lavanda/randuri-lavanda-toamna.jpg", alt: t.hero.photoAlt }}
+        photo={{ src: "/photos/lavanda/camp-lavanda-inflorit.jpg", alt: t.hero.photoAlt, position: "center 40%" }}
         contrastMiddle={40}
       />
       <SplitIntro statement={t.season.statement}>
