@@ -1,12 +1,16 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
 /** "În apropiere": a title beside a list of places and distances. */
 export function PlacesList({
   title,
   items,
+  more,
 }: {
   title: string;
   items: readonly { name: string; distance: string }[];
+  /** Link under the list to the full page of places. */
+  more?: { label: string; href: string };
 }) {
   return (
     <section>
@@ -23,6 +27,16 @@ export function PlacesList({
               <span className="type-nav text-muted">{item.distance}</span>
             </li>
           ))}
+          {more && (
+            <li>
+              <Link
+                href={more.href}
+                className="type-nav inline-flex min-h-12 items-center text-forest underline underline-offset-4 hover:no-underline"
+              >
+                {more.label} →
+              </Link>
+            </li>
+          )}
         </ul>
       </Container>
     </section>

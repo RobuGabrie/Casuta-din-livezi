@@ -4,7 +4,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium } from "playwright";
 
 const base = process.argv[2] ?? "http://localhost:3000";
-const paths = ["/ro", "/ro/cazare", "/ro/masa-la-noi", "/ro/lavanda", "/ro/contact", "/en", "/ro/nu-exista"];
+const paths = ["/ro", "/ro/cazare", "/ro/masa-la-noi", "/ro/lavanda", "/ro/imprejurimi", "/ro/contact", "/en", "/ro/nu-exista"];
 const browser = await chromium.launch();
 let total = 0;
 for (const width of [390, 1440]) {

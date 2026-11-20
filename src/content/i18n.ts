@@ -13,7 +13,7 @@ export const getDictionary = (lang: Locale) => dictionaries[lang];
 export type Dictionary = typeof ro;
 
 /** The site's pages. Slugs are Romanian in both languages, as in the design. */
-export const pages = ["home", "cazare", "masa", "lavanda", "contact"] as const;
+export const pages = ["home", "cazare", "masa", "lavanda", "imprejurimi", "contact"] as const;
 export type PageKey = (typeof pages)[number];
 
 const slugs: Record<PageKey, string> = {
@@ -21,6 +21,7 @@ const slugs: Record<PageKey, string> = {
   cazare: "/cazare",
   masa: "/masa-la-noi",
   lavanda: "/lavanda",
+  imprejurimi: "/imprejurimi",
   contact: "/contact",
 };
 

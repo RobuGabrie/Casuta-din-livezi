@@ -11,7 +11,8 @@ export const en: typeof ro = {
     cazare: "A holiday cottage in Cacica, Bucovina: one bedroom, living room, kitchenette, a balcony facing the hills and free parking. Book directly with us or on Booking.com and Airbnb.",
     masa: "A registered farmhouse kitchen (Punct Gastronomic Local) in Cacica, Bucovina: food cooked as a family, from our farm and the village, with no fixed menu. Book a table between 11:00 and 18:00.",
     lavanda: "A hectare of lavender in Cacica, Bucovina, in bloom from late June into July. Walks, photo sessions and lavender goods.",
-    contact: "How to reach Căsuța din Livezi in Cacica, Suceava County: 10 km from Gura Humorului and 35 km from Suceava Airport. Phone and WhatsApp: +40 751 425 215.",
+    contact: "How to reach Căsuța din Livezi in Cacica, Suceava County: 20 km from Gura Humorului and 50 km from Suceava Airport. Phone and WhatsApp: +40 751 425 215.",
+    imprejurimi: "What to see near Cacica and Gura Humorului: Cacica Salt Mine, the painted monasteries of Voroneț, Humor, Arbore and Sucevița, Marginea black pottery and the Rarău mountains. Distances and day trips.",
   },
   notFound: {
     title: "Nothing here.",
@@ -25,6 +26,7 @@ export const en: typeof ro = {
     masa: "Our table",
     lavanda: "Lavender",
     contact: "Contact",
+    imprejurimi: "Nearby",
     skipToContent: "Skip to content",
     servicesLabel: "What we offer",
     label: "Main navigation",
@@ -88,10 +90,11 @@ export const en: typeof ro = {
       title: "Stay one more day.",
       items: [
         { name: "Cacica Salt Mine & Basilica", distance: "In the village · about 15 min on foot" },
-        { name: "Gura Humorului", distance: "10 km" },
+        { name: "Gura Humorului", distance: "20 km" },
         { name: "Voroneț Monastery", distance: "25 km" },
-        { name: "Suceava Airport", distance: "about 35 km" },
+        { name: "Suceava Airport", distance: "about 50 km" },
       ],
+      more: "Everything worth seeing nearby",
     },
   },
   stay: {
@@ -230,8 +233,8 @@ export const en: typeof ro = {
     hero: {
       title: "Lavender",
       lead: ["A hectare of quiet,", "right in our yard."],
-      note: "The field in autumn · a photo of it in bloom, coming soon",
-      photoAlt: "Rows of lavender in the yard in autumn, with the forest behind",
+      note: "The field in bloom, in July",
+      photoAlt: "The lavender field in bloom, in the evening light, with the trees and the wooded hill behind",
     },
     season: {
       statement: ["When it turns purple."],
@@ -242,7 +245,7 @@ export const en: typeof ro = {
       label: "A walk in the field",
       title: ["Small steps.", "Air that smells of summer."],
       text: "Take it slowly between the rows and enjoy the view. A hectare of lavender, with the hills of Bucovina on the horizon.",
-      photoAlt: "Rows of lavender, with autumn trees and hills behind",
+      photoAlt: "The white wrought-iron table and chairs on a deck in the middle of the blooming lavender",
     },
     photos: {
       label: "Photo sessions",
@@ -272,12 +275,137 @@ export const en: typeof ro = {
     photoAlt: "The pond in the yard, with the wooden gazebo and willows",
     directions: {
       title: "Getting here",
-      lead: "From Gura Humorului, Cacica is about 10 km away. If you fly, Suceava Airport is about 35 km away. The cottage has free private parking.",
+      lead: "From Gura Humorului, the cottage is about 20 km away. If you fly, Suceava Airport is about 50 km away. The cottage has free private parking.",
       text: "The Cacica Salt Mine and Basilica are about 15 minutes away on foot. Voroneț Monastery is 25 km away.",
     },
     map: {
       action: "Open Google Maps",
-      caption: "Map of Cacica · the exact position of the property will be confirmed.",
+      caption: "Map of Cacica · Strada Principală 771.",
+    },
+  },
+  nearbyPage: {
+    title: "What to see near Cacica and Gura Humorului",
+    hero: {
+      index: "Cacica, Bucovina",
+      title: "Nearby",
+      lead: "Painted monasteries, a salt mine more than two hundred years old and villages of craftspeople, all within a day's drive of the cottage.",
+      photoAlt: "Voroneț Monastery, with its blue outer frescoes",
+    },
+    intro: {
+      statement: ["Leave in the morning,", "back for dinner."],
+      text: "The cottage is a good base for Bucovina. Below are the places we send our guests to most often, with the distance from us and a few words about each. Distances are by car, rounded.",
+    },
+    groups: {
+      village: "In the village, on foot",
+      monasteries: "The painted monasteries",
+      crafts: "Crafts",
+      towns: "Towns and history",
+      nature: "Nature",
+    },
+    places: {
+      salina: {
+        name: "Cacica Salt Mine",
+        text: "One of the oldest salt mines in Romania, opened in 1791. Wooden stairs take you down to a chapel carved in salt, an underground lake and a ballroom. It stays around 12 °C all year, so bring a jacket even in summer.",
+        photoAlt: "The chapel carved in salt in the Cacica Salt Mine",
+      },
+      bazilica: {
+        name: "Cacica Basilica",
+        text: "The National Marian Sanctuary, a red-brick neo-Gothic church built in the early 20th century. In 2000 it was named a basilica minor. On 15 August, the feast of the Assumption, thousands of pilgrims come here.",
+        photoAlt: "The red-brick basilica in Cacica, with its clock tower",
+      },
+      arbore: {
+        name: "Arbore Church",
+        text: "Built in 1503 by Luca Arbure, with 16th-century outer frescoes. It is a UNESCO site and usually quieter than the big monasteries, so you may have it almost to yourself.",
+        photoAlt: "Arbore Church, with the fresco on its west wall",
+      },
+      humor: {
+        name: "Humor Monastery",
+        text: "Founded in 1530, with frescoes in deep reddish-brown. Climb the bell tower for a view over the courtyard and the hills. A UNESCO site.",
+        photoAlt: "The church of Humor Monastery and its bell tower",
+      },
+      voronet: {
+        name: "Voroneț Monastery",
+        text: "Founded by Stephen the Great in 1488 and often called “the Sistine Chapel of the East”. Voroneț blue and the Last Judgement on the west wall bring visitors from all over the world. Come in the morning, before the coaches.",
+        photoAlt: "The entrance to Voroneț Monastery",
+      },
+      sucevita: {
+        name: "Sucevița Monastery",
+        text: "The largest of the painted monasteries, behind high fortress walls. The Ladder of Virtues on the north wall is one of the best-known frescoes in Bucovina.",
+        photoAlt: "The church of Sucevița Monastery inside its walled courtyard",
+      },
+      moldovita: {
+        name: "Moldovița Monastery",
+        text: "Founded by Petru Rareș in 1532, inside a fortified courtyard. The Siege of Constantinople, painted on the south wall, is the scene everyone stops for. The road there, over the hills, is worth it too.",
+        photoAlt: "The church of Moldovița Monastery, seen from the side",
+      },
+      putna: {
+        name: "Putna Monastery",
+        text: "Stephen the Great's first foundation and the place where he is buried. Next to the church is a museum of old embroidery and manuscripts. A good day to combine with Marginea and Sucevița.",
+        photoAlt: "Putna Monastery in the evening light",
+      },
+      marginea: {
+        name: "Marginea black pottery",
+        text: "The village of potters who make black pottery, fired in an old way without glaze. Step into a workshop to watch them at the wheel and buy straight from the makers.",
+        photoAlt: "The Marginea village sign, with a large black clay jug",
+      },
+      vama: {
+        name: "The Egg Museum in Vama",
+        text: "Thousands of painted eggs from Bucovina and around the world, in a small museum in a village near Câmpulung. Egg painting is still a living craft here, especially before Easter.",
+        photoAlt: "Painted eggs with traditional Romanian patterns",
+      },
+      "gura-humorului": {
+        name: "Gura Humorului",
+        text: "The nearest town, with shops, cash machines and restaurants. In winter it has the Șoimul ski slope; in summer there are walks on the hills around it.",
+        photoAlt: "Gura Humorului seen from the hill, with mountains behind",
+      },
+      suceava: {
+        name: "The Seat Fortress of Suceava",
+        text: "The fortress where Stephen the Great and his successors ruled, restored and open to visitors. Right next to it is the Bucovina Village Museum, with old houses and a wooden church brought from all over the region.",
+        photoAlt: "The Seat Fortress of Suceava lit up in the evening",
+      },
+      rarau: {
+        name: "Rarău and Pietrele Doamnei",
+        text: "The massif with the Pietrele Doamnei rocks, visible from far away. Drive up to near the mountain hut, then walk the marked trails. One of the finest views in Bucovina.",
+        photoAlt: "The Pietrele Doamnei rocks above the Rarău forest",
+      },
+    },
+    onFoot: "on foot",
+    byCar: "by car",
+    directions: "Directions",
+    wiki: "Wikipedia",
+    photo: "Photo",
+    publicDomain: "public domain",
+    cropped: "cropped",
+    trips: {
+      title: "Three days, three roads",
+      items: [
+        {
+          title: "The nearby monasteries",
+          lines: [
+            "Voroneț in the morning, before the crowds, then Humor and Arbore on the way home.",
+            "About 75 km and two hours of driving. You're back in time for a late meal with us (the kitchen is open until 18:00).",
+          ],
+        },
+        {
+          title: "North: Marginea, Sucevița, Putna",
+          lines: [
+            "A black-pottery workshop, the largest painted monastery and the tomb of Stephen the Great.",
+            "A full day: about 130 km and three hours of driving.",
+          ],
+        },
+        {
+          title: "A day without the car",
+          lines: [
+            "The salt mine in the morning, then the basilica, both a quarter of an hour's walk away.",
+            "Lunch with us, then the afternoon in the lavender (late June–July) or by the pond.",
+          ],
+        },
+      ],
+    },
+    contact: {
+      title: "Stay with us, set off from here.",
+      text: "We're happy to tell you what's open, where to stop and which road to take.",
+      action: "See the cottage",
     },
   },
   actions: { call: "Call us", whatsapp: "WhatsApp" },

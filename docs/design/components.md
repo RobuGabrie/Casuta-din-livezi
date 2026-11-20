@@ -117,11 +117,23 @@ Forest background. Left: H2 "Hai pe la noi.", address, phone and email, an
 
 ## Footer (subsol) → `src/components/layout/SiteFooter.tsx`
 
-Forest background, hairline on top, large serif wordmark, one tagline, four nav
-links, Facebook and Instagram icons, then text links and the copyright line.
+Forest background, hairline on top, large serif wordmark, one tagline, five nav
+links (Împrejurimi added after Figma, between Lavanda and Contact), Facebook and Instagram icons, then text links and the copyright line.
 
 ## Admin request card
 
 White card with a line border: time and party size, status (Nouă / Confirmată /
 Refuzată, the last in error red), name, phone, note, then Confirmă (primary) and
 Refuză (secondary) for new requests only.
+
+## Împrejurimi (not in Figma) → `src/components/sections/NearbyGroup.tsx`
+
+Added 2026-11-20 at the owner's request, without a Figma frame, from existing parts:
+`PageHero`, `IntroStatement`, `InfoColumns` (day trips) and `CallBand`. Each group of
+places is an H2 over a hairline, then cards in one column on mobile and two from 1024px:
+a 4:3 photo (radius 0) with its credit as a caption, H3 name, the distance in Nav forest,
+Body M muted text, then forest Nav links (directions, Wikipedia) at least 48px tall.
+The photos come from Wikimedia Commons; their licences require the author and licence
+next to each photo, so the caption stays. The page is linked from the footer, the
+"Mai rămâi o zi." list on Acasă and is not in the header nav (its link widths are fixed
+in Figma).

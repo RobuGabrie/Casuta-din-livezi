@@ -13,10 +13,13 @@ export function StructuredData({ lang }: { lang: Locale }) {
   const t = getDictionary(lang);
   const address = {
     "@type": "PostalAddress",
-    addressLocality: "Cacica",
-    addressRegion: "Suceava",
+    streetAddress: site.address.street,
+    postalCode: site.address.postalCode,
+    addressLocality: site.address.locality,
+    addressRegion: site.address.region,
     addressCountry: "RO",
   };
+  const geo = { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lon };
   const sameAs = [site.facebookUrl, site.instagramStayUrl, site.instagramKitchenUrl, site.bookingUrl, site.airbnbUrl].filter(
     Boolean,
   );
@@ -34,6 +37,8 @@ export function StructuredData({ lang }: { lang: Locale }) {
         telephone: site.phone,
         email: site.email,
         address,
+        geo,
+        hasMap: site.mapsUrl,
         checkinTime: "15:00",
         checkoutTime: "11:00",
         petsAllowed: false,
@@ -49,6 +54,7 @@ export function StructuredData({ lang }: { lang: Locale }) {
         image: `${siteUrl}/og/masa-la-noi.jpg`,
         telephone: site.phone,
         address,
+        geo,
         servesCuisine: lang === "ro" ? "Bucătărie tradițională din Bucovina" : "Traditional Bucovina cooking",
         acceptsReservations: true,
       },

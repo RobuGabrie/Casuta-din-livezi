@@ -61,7 +61,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         photo={{ src: "/photos/lavanda/randuri-lavanda-toamna.jpg", alt: t.lavender.photoAlt }}
       />
 
-      <PlacesList title={t.nearby.title} items={t.nearby.items} />
+      <PlacesList
+        title={t.nearby.title}
+        items={t.nearby.items}
+        more={{ label: t.nearby.more, href: href(lang, "imprejurimi") }}
+      />
       <ContactBand lang={lang} />
     </>
   );

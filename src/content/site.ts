@@ -10,8 +10,10 @@ export const site = {
   // Phone and WhatsApp.
   phone: "+40 751 425 215" as string,
   email: "robumihaela69@gmail.com" as string,
-  // Google Maps search for the place, until the exact pin is confirmed.
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=C%C4%83su%C8%9Ba%20din%20Livezi%20Cacica",
+  address: { street: "Strada Principală 771", postalCode: "727095", locality: "Cacica", region: "Suceava" },
+  // The house, from the pin the family shared.
+  geo: { lat: 47.643929, lon: 25.89254 },
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=47.643929%2C25.89254",
   facebookUrl: "https://www.facebook.com/Casutadinlivezi",
   // Two Instagram accounts: one for the stay, one for the kitchen (PGL).
   // The footer's single Instagram link (as in Figma) goes to the stay account;

@@ -9,7 +9,8 @@ export const ro = {
     cazare: "Căsuță de vacanță în Cacica, Bucovina: un dormitor, living, chicinetă, balcon spre dealuri și parcare gratuită. Rezervă direct cu noi sau pe Booking.com și Airbnb.",
     masa: "Punct Gastronomic Local în Cacica, Bucovina: mâncare gătită în familie, din gospodărie și din sat, fără meniu fix. Rezervă o masă, între 11:00 și 18:00.",
     lavanda: "Un hectar de lavandă în Cacica, Bucovina, care înflorește de la sfârșitul lui iunie până în iulie. Plimbări, ședințe foto și produse din lavandă.",
-    contact: "Cum ajungi la Căsuța din Livezi, în Cacica, județul Suceava: la 10 km de Gura Humorului și 35 km de Aeroportul Suceava. Telefon și WhatsApp: +40 751 425 215.",
+    contact: "Cum ajungi la Căsuța din Livezi, în Cacica, județul Suceava: la 20 km de Gura Humorului și 50 km de Aeroportul Suceava. Telefon și WhatsApp: +40 751 425 215.",
+    imprejurimi: "Ce să vezi lângă Cacica și Gura Humorului: Salina Cacica, mănăstirile pictate Voroneț, Humor, Arbore și Sucevița, ceramica neagră de la Marginea și Rarăul. Distanțe și trasee de o zi.",
   },
   notFound: {
     title: "Aici nu e nimic.",
@@ -23,6 +24,7 @@ export const ro = {
     masa: "Masa la noi",
     lavanda: "Lavanda",
     contact: "Contact",
+    imprejurimi: "Împrejurimi",
     skipToContent: "Sari la conținut",
     servicesLabel: "Ce găsești la noi",
     label: "Navigație principală",
@@ -86,10 +88,11 @@ export const ro = {
       title: "Mai rămâi o zi.",
       items: [
         { name: "Salina & Bazilica Cacica", distance: "În sat · aprox. 15 min pe jos" },
-        { name: "Gura Humorului", distance: "10 km" },
+        { name: "Gura Humorului", distance: "20 km" },
         { name: "Mănăstirea Voroneț", distance: "25 km" },
-        { name: "Aeroportul Suceava", distance: "aprox. 35 km" },
+        { name: "Aeroportul Suceava", distance: "aprox. 50 km" },
       ],
+      more: "Tot ce e de văzut în apropiere",
     },
   },
   stay: {
@@ -229,8 +232,8 @@ export const ro = {
     hero: {
       title: "Lavanda",
       lead: ["Un hectar de tihnă,", "chiar în curtea noastră."],
-      note: "Câmpul toamna · fotografia înfloririi, în curând",
-      photoAlt: "Rândurile de lavandă din curte, toamna, cu pădurea în spate",
+      note: "Câmpul înflorit, în iulie",
+      photoAlt: "Câmpul de lavandă înflorit, în lumina serii, cu copacii și dealul împădurit în spate",
     },
     season: {
       statement: ["Când se îmbracă în mov."],
@@ -241,7 +244,7 @@ export const ro = {
       label: "Plimbare prin câmp",
       title: ["Pași mici.", "Aer cu parfum de vară."],
       text: "Ia-o încet printre rânduri și bucură-te de peisaj. Un hectar de lavandă, cu dealurile Bucovinei la orizont.",
-      photoAlt: "Rânduri de lavandă, cu copaci de toamnă și dealuri în fundal",
+      photoAlt: "Măsuța și scaunele albe din fier forjat, pe un podest în mijlocul lavandei înflorite",
     },
     photos: {
       label: "Ședințe foto",
@@ -271,12 +274,137 @@ export const ro = {
     photoAlt: "Iazul din curte, cu foișorul de lemn și sălciile",
     directions: {
       title: "Cum ajungi",
-      lead: "Din Gura Humorului, Cacica este la aproximativ 10 km. Dacă vii cu avionul, Aeroportul Suceava se află la circa 35 km. La căsuță ai parcare privată gratuită.",
+      lead: "Din Gura Humorului, căsuța este la aproximativ 20 km. Dacă vii cu avionul, Aeroportul Suceava se află la circa 50 km. La căsuță ai parcare privată gratuită.",
       text: "Salina și Bazilica din Cacica sunt la aproximativ 15 minute de mers pe jos. Mănăstirea Voroneț se află la 25 km.",
     },
     map: {
       action: "Deschide Google Maps",
-      caption: "Harta localității Cacica · poziția exactă a proprietății urmează să fie confirmată.",
+      caption: "Harta localității Cacica · Strada Principală 771.",
+    },
+  },
+  nearbyPage: {
+    title: "Ce să vezi lângă Cacica și Gura Humorului",
+    hero: {
+      index: "Cacica, Bucovina",
+      title: "Împrejurimi",
+      lead: "Mănăstiri pictate, o salină veche de peste două sute de ani și sate de meșteșugari, toate la o zi de drum de căsuță.",
+      photoAlt: "Mănăstirea Voroneț, cu fresca exterioară albastră",
+    },
+    intro: {
+      statement: ["Pleci dimineața,", "te întorci la cină."],
+      text: "Căsuța e un loc bun de pornire prin Bucovina. Mai jos sunt locurile la care trimitem cel mai des oaspeții, cu distanța de la noi și câteva vorbe despre fiecare. Distanțele sunt cu mașina, rotunjite.",
+    },
+    groups: {
+      village: "În sat, pe jos",
+      monasteries: "Mănăstirile pictate",
+      crafts: "Meșteșuguri",
+      towns: "Orașe și istorie",
+      nature: "Natură",
+    },
+    places: {
+      salina: {
+        name: "Salina Cacica",
+        text: "Una dintre cele mai vechi saline din țară, deschisă în 1791. Cobori pe scări de lemn la o capelă săpată în sare, un lac subteran și o sală de bal. Jos sunt cam 12 °C tot anul, așa că ia o haină și vara.",
+        photoAlt: "Capela săpată în sare din Salina Cacica",
+      },
+      bazilica: {
+        name: "Bazilica din Cacica",
+        text: "Sanctuarul Marian Național, o biserică neogotică din cărămidă roșie ridicată la începutul secolului XX. În 2000 a primit titlul de basilica minor. La 15 august, de Sfânta Maria, vin aici mii de pelerini.",
+        photoAlt: "Bazilica din Cacica, din cărămidă roșie, cu turnul cu ceas",
+      },
+      arbore: {
+        name: "Biserica Arbore",
+        text: "Ridicată în 1503 de Luca Arbure, cu fresce exterioare din secolul al XVI-lea. Face parte din patrimoniul UNESCO și e de obicei mai liniștită decât mănăstirile mari, așa că o ai aproape numai pentru tine.",
+        photoAlt: "Biserica Arbore, cu fresca exterioară pe peretele de vest",
+      },
+      humor: {
+        name: "Mănăstirea Humorului",
+        text: "Ctitorită în 1530, cu fresce în care domină roșul-brun. Urcă în turnul clopotniță pentru o privire peste curte și peste dealuri. Monument UNESCO.",
+        photoAlt: "Biserica mănăstirii Humor și turnul clopotniță",
+      },
+      voronet: {
+        name: "Mănăstirea Voroneț",
+        text: "Ctitoria lui Ștefan cel Mare din 1488, numită adesea „Capela Sixtină a Răsăritului”. Albastrul de Voroneț și Judecata de Apoi de pe peretele de vest aduc aici oameni din toată lumea. Vino dimineața, înainte de autocare.",
+        photoAlt: "Intrarea în Mănăstirea Voroneț",
+      },
+      sucevita: {
+        name: "Mănăstirea Sucevița",
+        text: "Cea mai mare dintre mănăstirile pictate, cu ziduri înalte de cetate. Scara Virtuților, pe latura de nord, e una dintre cele mai cunoscute fresce din Bucovina.",
+        photoAlt: "Biserica mănăstirii Sucevița în curtea cu ziduri de cetate",
+      },
+      moldovita: {
+        name: "Mănăstirea Moldovița",
+        text: "Ctitoria lui Petru Rareș din 1532, în mijlocul unei incinte fortificate. Asediul Constantinopolului, pictat pe peretele de sud, e scena la care se opresc toți. Drumul până acolo, peste dealuri, merită și el.",
+        photoAlt: "Biserica mănăstirii Moldovița, văzută din lateral",
+      },
+      putna: {
+        name: "Mănăstirea Putna",
+        text: "Prima ctitorie a lui Ștefan cel Mare și locul în care este înmormântat. Lângă biserică e un muzeu cu broderii și manuscrise vechi. O zi bună de combinat cu Marginea și Sucevița.",
+        photoAlt: "Mănăstirea Putna în lumina apusului",
+      },
+      marginea: {
+        name: "Ceramica neagră de la Marginea",
+        text: "Satul olarilor care fac ceramică neagră, arsă după o tehnică veche, fără glazură. Intră într-un atelier să vezi cum se lucrează la roată și cumpără direct de la meșteri.",
+        photoAlt: "Indicatorul satului Marginea, cu un ulcior mare din ceramică neagră",
+      },
+      vama: {
+        name: "Muzeul Oului din Vama",
+        text: "Mii de ouă încondeiate din Bucovina și din lume, într-un muzeu mic dintr-un sat de lângă Câmpulung. Încondeiatul ouălor e un meșteșug încă viu în zonă, mai ales înainte de Paște.",
+        photoAlt: "Ouă încondeiate cu modele tradiționale românești",
+      },
+      "gura-humorului": {
+        name: "Gura Humorului",
+        text: "Cel mai apropiat oraș, cu magazine, bancomate și restaurante. Iarna are pârtia Șoimul, iar vara poți face plimbări pe dealurile din jur.",
+        photoAlt: "Gura Humorului văzut de pe deal, cu munții în spate",
+      },
+      suceava: {
+        name: "Cetatea de Scaun a Sucevei",
+        text: "Cetatea în care au domnit Ștefan cel Mare și urmașii lui, restaurată și deschisă vizitării. Chiar lângă ea e Muzeul Satului Bucovinean, cu case vechi și o biserică de lemn aduse din toată Bucovina.",
+        photoAlt: "Cetatea de Scaun a Sucevei luminată seara",
+      },
+      rarau: {
+        name: "Rarău și Pietrele Doamnei",
+        text: "Masivul cu stâncile Pietrele Doamnei, care se văd de departe. Urci cu mașina până aproape de cabană, apoi pe jos pe trasee marcate. Una dintre cele mai frumoase priveliști din Bucovina.",
+        photoAlt: "Stâncile Pietrele Doamnei deasupra pădurii din Rarău",
+      },
+    },
+    onFoot: "pe jos",
+    byCar: "cu mașina",
+    directions: "Drumul pe hartă",
+    wiki: "Wikipedia",
+    photo: "Foto",
+    publicDomain: "domeniu public",
+    cropped: "decupată",
+    trips: {
+      title: "Trei zile, trei drumuri",
+      items: [
+        {
+          title: "Mănăstirile din apropiere",
+          lines: [
+            "Voroneț dimineața, înainte de aglomerație, apoi Humor și Arbore pe drumul spre casă.",
+            "Cam 75 km și două ore de condus. Ajungi la timp pentru o masă târzie la noi (bucătăria e deschisă până la 18:00).",
+          ],
+        },
+        {
+          title: "Spre nord: Marginea, Sucevița, Putna",
+          lines: [
+            "Un atelier de ceramică neagră, cea mai mare mănăstire pictată și mormântul lui Ștefan cel Mare.",
+            "O zi întreagă: cam 130 km și trei ore de condus.",
+          ],
+        },
+        {
+          title: "O zi fără mașină",
+          lines: [
+            "Dimineața în salină, apoi la bazilică, amândouă la un sfert de oră de mers pe jos.",
+            "Prânz la noi, iar după-amiaza în lavandă (sfârșit de iunie–iulie) sau la iaz.",
+          ],
+        },
+      ],
+    },
+    contact: {
+      title: "Stai la noi și pleacă de aici.",
+      text: "Îți spunem cu drag ce e deschis, unde merită să oprești și pe ce drum să o iei.",
+      action: "Vezi căsuța",
     },
   },
   actions: { call: "Sună-ne", whatsapp: "WhatsApp" },

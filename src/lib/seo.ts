@@ -13,6 +13,7 @@ const shareImages: Record<PageKey, string> = {
   cazare: "/og/cazare.jpg",
   masa: "/og/masa-la-noi.jpg",
   lavanda: "/og/lavanda.jpg",
+  imprejurimi: "/og/imprejurimi.jpg",
   contact: "/og/contact.jpg",
 };
 
